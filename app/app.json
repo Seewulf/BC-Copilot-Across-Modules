@@ -1,0 +1,40 @@
+{
+  "id": "fd0480a3-8f77-4e94-8c93-afbff2a5c456",
+  "name": "Explain and Resolve",
+  "publisher": "Prabin Bhusal",
+  "version": "1.0.0.0",
+  "brief": "Copilot features for finance teams: explain a purchase invoice variance and plan collections, with every figure computed by Business Central and no findings or emails saved until a person keeps them.",
+  "description": "Explain & Resolve for Business Central. Business Central computes the facts from its ledgers and ranks them, an AI model explains them and drafts emails, and a person reviews everything before findings or emails are saved. Nothing is ever posted or sent. Needs your own AI provider key: the Claude API is supported, Azure OpenAI is planned.",
+  "help": "https://github.com/Seewulf/BC-Copilot-Across-Modules",
+  "url": "https://github.com/Seewulf/BC-Copilot-Across-Modules",
+  "dependencies": [],
+  "platform": "1.0.0.0",
+  "application": "29.0.0.0",
+  "idRanges": [
+    {
+      "from": 58200,
+      "to": 58269
+    }
+  ],
+  "internalsVisibleTo": [
+    {
+      "id": "cbb181cb-34c6-4131-b2d9-9e73365b341b",
+      "name": "Explain and Resolve Tests",
+      "publisher": "Prabin Bhusal"
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "18.0",
+  "target": "Cloud",
+  "resourceFolders": [
+    "prompts"
+  ],
+  "features": [
+    "NoImplicitWith",
+    "TranslationFile"
+  ]
+}

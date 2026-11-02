@@ -1,0 +1,13 @@
+{
+  "folders": [
+    { "path": "app", "name": "Explain and Resolve" },
+    { "path": "test", "name": "Explain and Resolve Tests" }
+  ],
+  "settings": {
+    "al.enableCodeAnalysis": true,
+    "al.codeAnalyzers": [ "${CodeCop}", "${PerTenantExtensionCop}", "${UICop}" ],
+    "al.ruleSetPath": "../EXR.ruleset.json",
+    "editor.formatOnSave": true,
+    "files.exclude": { "**/.alpackages": true, "**/.alcache": true }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Explain and Resolve",
+  "description": "Code analysis rules for the app and the test app.",
+  "rules": [
+    {
+      "id": "PTE0012",
+      "action": "None",
+      "justification": "internalsVisibleTo exists for the test app only. It exposes all internals (including setting and removing the API key; only the Claude client can read it) to an app with the test app's identity, so never install the test app in production."
+    }
+  ]
+}

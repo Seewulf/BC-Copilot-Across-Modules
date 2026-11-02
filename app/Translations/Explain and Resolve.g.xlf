@@ -1,0 +1,1864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Explain and Resolve">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 4051262847 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain and Resolve Collection Customer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 1552632244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Average Days Late</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Average Days Late - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 1263945408 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Broken Promise Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Broken Promise Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 3636286936 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Broken Promise Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Broken Promise Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 2359550932 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Limit (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Credit Limit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 2007430009 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Used %</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Credit Used % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 1171137197 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Customer Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 4190130733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Customer No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 1284317336 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Record ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Customer Record ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 3907299936 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer System Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Customer System Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 370766662 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disputed Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Disputed Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 1345891167 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Oldest Due Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Oldest Due Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 1565143651 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open Sales Orders (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Open Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 2072752735 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Overdue 1-30 Days (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Overdue 1-30 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 4291203173 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Overdue 31-60 Days (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Overdue 31-60 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 591572195 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Overdue 61-90 Days (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Overdue 61-90 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 137698276 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Overdue Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Overdue Entries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 108292295 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Overdue Over 90 Days (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Overdue Over 90 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 3650786834 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoices Paid in the Last 12 Months</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Paid Invoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 835567840 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pending Promise Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Pending Promise Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 1345554424 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pending Promise Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Pending Promise Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 2219487564 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Priority Score</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Score - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 4197037212 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Overdue (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Total Overdue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 3512071156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unapplied Payments and Credits (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Unapplied Credits - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4051262847 - Field 2064570821 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Weighted Overdue (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Collection Customer - Field Weighted Overdue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain and Resolve Finding</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 346708723 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the finding is kept when you choose Keep it. Only accepted findings can put the invoice on hold.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Accepted - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 346708723 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accept</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Accepted - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 2279323338 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the suggested resolution.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Action - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 2279323338 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Action</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Action - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 592951229 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount of the difference in local currency.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Amount (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 592951229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Amount (LCY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3865998304 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how sure the model is about its explanation. It is blank when no explanation came back.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Confidence - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3865998304 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confidence</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Confidence - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the explanation of the finding. Every figure in it comes from Business Central.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explanation</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 2642869315 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the figures that Business Central computed for the finding.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Detail - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 2642869315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Detail</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Detail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 264318664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email Body</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Email Body - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 4124672448 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the email was saved as a draft in the email outbox. Without an email account only the text on this finding is kept.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Email Draft Saved - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 4124672448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email Draft Saved</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Email Draft Saved - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 172738764 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the subject of the email drafted for this finding.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Email Subject - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 172738764 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email Subject</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Email Subject - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 335312937 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the email address that the draft is addressed to. Business Central takes it from the customer card when you keep the review; it is never sent to the AI service.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Email To - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 335312937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email To</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Email To - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3710723422 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the key that the model uses to refer to the finding.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Finding Key - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3710723422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finding Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Finding Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 2971965167 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the detector that raised the finding.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Finding Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 2971965167 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finding Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Finding Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3320823955 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the finding within the run.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Line No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 1018677426 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the position of the finding in the worklist. Business Central ranks the customers by a priority score.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Rank - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 1018677426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Rank</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Rank - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3812630320 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies when the review that kept this finding was started. Choose it to open the review.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Run Created At - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3812630320 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reviewed At</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Run Created At - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 210654446 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the run that the finding belongs to.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Run Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 210654446 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Run Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3618771765 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how serious the finding is.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Severity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3618771765 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Severity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Severity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 2649378047 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the record that shows the difference, for example the receipt line.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Source Record ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 2649378047 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Record ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Source Record ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 2847409975 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the system ID of the record that the finding is about, for example the customer.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Source System Id - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 2847409975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source System Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Source System Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 1234124704 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line or document that the finding is about. Choose it to open the source record.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Subject - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 1234124704 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Subject</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Subject - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 341675105 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the explanation contains a figure that the model wrote itself instead of a figure from Business Central.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Unverified Figure - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 341675105 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unverified Figure</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Unverified Figure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain and Resolve Run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 785629580 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the feature that created the run.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Capability - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 785629580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Capability</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Capability - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2570673311 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies when the run was started.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Created At - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2570673311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Created At</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Created At - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 410940989 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the customer posting group whose customers are reviewed. Leave it blank to review all customers.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Customer Posting Group - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 410940989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Posting Group</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Customer Posting Group - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 1637095154 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how long the AI service took to answer.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Duration - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 1637095154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Duration</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Duration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 264318664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email Body</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Email Body - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 4124672448 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the email was saved as a draft in the email outbox. Without an email account only the text on this run is kept.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Email Draft Saved - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 4124672448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email Draft Saved</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Email Draft Saved - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 172738764 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the subject of the drafted email.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Email Subject - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 172738764 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email Subject</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Email Subject - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 335312937 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the email address that the draft is addressed to. It is never sent to the AI service.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Email To - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 335312937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email To</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Email To - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2920767976 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the tone of the drafted email.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Email Tone - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2920767976 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email Tone</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Email Tone - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 883711285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the run.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2852966117 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies why the AI service could not explain the findings, or why the run was blocked.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Error Message - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2852966117 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error Message</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Error Message - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2719666954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many input tokens the run used, retries included.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Input Tokens - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2719666954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Input Tokens</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Input Tokens - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 802492631 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many of the highest-ranked customers are reviewed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Max. Customers - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 802492631 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max. Customers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Max. Customers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 1695122201 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the model that wrote the explanation.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Model - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 1695122201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Model</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Model - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 3690942980 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many findings were kept with the run.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field No. of Findings - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 3690942980 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Findings</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field No. of Findings - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 1678292497 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many output tokens the run used, retries included.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Output Tokens - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 1678292497 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Output Tokens</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Output Tokens - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 3498537050 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the prompt file and a hash of the prompt text that the run used.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Prompt Version - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 3498537050 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prompt Version</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Prompt Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 553464652 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the salesperson whose customers are reviewed. Leave it blank to review all customers.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Salesperson Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 553464652 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Salesperson Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Salesperson Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 1882905478 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the document or record that was reviewed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Source No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 1882905478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Source No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2649378047 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the record that was reviewed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Source Record ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2649378047 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Record ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Source Record ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2847409975 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the system ID of the record that was reviewed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Source System Id - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2847409975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source System Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Source System Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 76420432 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the table of the record that was reviewed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Source Table No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 76420432 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Table No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Source Table No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the result was kept, discarded, failed or blocked by a daily limit.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Status - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2166945456 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the summary, with every figure filled in by Business Central.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Summary - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2166945456 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Summary</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Summary - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2680052352 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the price difference, in percent, that is accepted without a finding.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Tolerance % - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2680052352 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tolerance %</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Tolerance % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2369817848 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the summary or the email contains a figure that the model wrote itself instead of a figure from Business Central. Check it before you rely on it.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Unverified Figures - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2369817848 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unverified Figures</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Unverified Figures - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the user who started the run.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field User ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2708250016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field User ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 180039979 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the note that the user added for the AI service.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field User Note - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 180039979 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Note</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field User Note - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain and Resolve Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - NamedType 1078372376" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The endpoint changed after the API key was entered. Enter the API key again.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - NamedType EndpointChangedErr</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - NamedType 968701966" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The endpoint must start with https://.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - NamedType HttpsOnlyErr</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - NamedType 1071428268" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You need permission to change the Explain and Resolve Setup to change the API key.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - NamedType NoKeyPermissionErr</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - NamedType 950344170" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the Explain and Resolve Setup page in this company first.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - NamedType SetupMissingErr</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 3687300662 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the API version that is sent with every request, so the request and reply formats do not change unexpectedly.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field API Version - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 3687300662 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>API Version</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field API Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 1954632868 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the most runs that all users in this company together can start per day. Runs are counted from the Explain and Resolve Runs created today; a blocked attempt is logged as Blocked by Limit and does not count.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Daily Calls per Company - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 1954632868 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Daily Calls per Company</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Daily Calls per Company - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 3293840650 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the most runs that one user can start per day. Runs are counted from the Explain and Resolve Runs created today; a blocked attempt is logged as Blocked by Limit and does not count.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Daily Calls per User - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 3293840650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Daily Calls per User</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Daily Calls per User - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 3041308785 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the tone of drafted emails. Users can change it in the dialog.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Default Email Tone - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 3041308785 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Default Email Tone</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Default Email Tone - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 1881409184 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how much the model thinks before it answers. Higher effort can give better explanations but takes longer and uses more tokens.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Effort - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 1881409184 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Effort</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Effort - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 2695595997 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the URL that the requests are sent to. Only https:// addresses are allowed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Endpoint - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 2695595997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Endpoint</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Endpoint - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 473566670 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the On Hold code that Keep it puts on a purchase invoice when a kept finding needs an answer from the vendor. Business Central copies it to the vendor ledger entry, so Suggest Vendor Payments skips the invoice. Leave it blank to never put invoices on hold.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Hold Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 473566670 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hold Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Hold Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 3275771821 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the most tokens the model may write in one reply, thinking included. A reply that reaches this limit is cut off and cannot be used.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Max Output Tokens - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 3275771821 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max Output Tokens</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Max Output Tokens - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 1695122201 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the model ID that the provider runs, for example claude-haiku-5-5.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Model - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 1695122201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Model</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Model - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 297635827 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the AI service that explains the findings.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Provider - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 297635827 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Provider</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Provider - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 713293571 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default price difference, in percent, that Explain variance accepts without a finding. Users can change it in the dialog.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Variance Tolerance % - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 713293571 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variance Tolerance %</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Variance Tolerance % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 405886110 - NamedType 47891919" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Claude API returned status %1: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = HTTP status code, %2 = error message from the API</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Claude Chat Client - NamedType ApiErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 405886110 - NamedType 3621259247" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Business Central blocked the request to the Claude API. Turn on Allow HttpClient Requests for this extension in Extension Management &gt; Configure.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Claude Chat Client - NamedType BlockedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 405886110 - NamedType 3747530349" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Claude API did not accept the API key. Enter a valid key on the Explain and Resolve Setup page.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Claude Chat Client - NamedType InvalidApiKeyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 405886110 - NamedType 1521412279" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The JSON schema for the reply is not valid JSON.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Claude Chat Client - NamedType InvalidSchemaErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 405886110 - NamedType 3822231875" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The reply was cut off because it reached the Max Output Tokens limit. Raise Max Output Tokens on the Explain and Resolve Setup page and try again.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Claude Chat Client - NamedType MaxTokensErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 405886110 - NamedType 3051168133" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter the API key on the Explain and Resolve Setup page first.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Claude Chat Client - NamedType NoApiKeyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 405886110 - NamedType 924044750" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Your Claude API credits are used up. Add credits in the Claude Console and try again.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Claude Chat Client - NamedType NoCreditsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 405886110 - NamedType 986933880" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Claude API is overloaded at the moment. Try again in a few minutes.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Claude Chat Client - NamedType OverloadedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 405886110 - NamedType 874185374" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Claude API rate limit was reached. Wait a minute and try again.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Claude Chat Client - NamedType RateLimitErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 405886110 - NamedType 2185969689" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The model declined to answer this request.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Claude Chat Client - NamedType RefusalErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 405886110 - NamedType 652305382" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The request to the Claude API could not be sent: %1 In a sandbox, turn on Allow HttpClient Requests for this extension in Extension Management &gt; Configure.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = error from the HTTP client</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Claude Chat Client - NamedType SendFailedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 405886110 - NamedType 3699042893" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Claude API returned a response that could not be read.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Claude Chat Client - NamedType UnexpectedResponseErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 555299070" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The payment promised for %1 has not arrived.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = date</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType BrokenPromiseLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 8414684" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit limit %1 used, including sales orders, shipments and invoices not yet posted.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = percentage</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType CreditUsedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 572852591" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 customers</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of customers</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType CustomersLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 1534050375" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 days</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of days</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType DaysLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 3342129989" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 overdue on %2; the oldest is %3 overdue.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = amount, %2 = number of documents, for example 2 documents, %3 = days, for example 45 days</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType DetailLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 1721624200" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 is disputed or on hold.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = amount</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType DisputedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 3901634850" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 documents</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of documents</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType DocumentsLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 2016070055" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No email account is set up, so %1 reminder emails are kept on the review. Open them there with Open Email.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of emails</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType DraftsKeptMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 571423606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 reminder emails are saved as drafts in your email outbox.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of emails</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType DraftsSavedMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 247450655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>- %1 %2, not yet applied: %3</source>
+          <note from="Developer" annotates="general" priority="2">%1 = document type, for example Payment, %2 = document number, %3 = amount, negative</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType EmailCreditLineLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 1925393684" size-unit="char" translate="yes" xml:space="preserve">
+          <source>- %1 %2, due %3, %4 overdue: %5</source>
+          <note from="Developer" annotates="general" priority="2">%1 = document type, %2 = document number, %3 = due date, %4 = days, for example 45 days, %5 = amount outstanding</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType EmailLineLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 2275315909" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total overdue, less payments and credits not yet applied: %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = amount</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType EmailNetTotalLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 1324342752" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total overdue: %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = amount</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType EmailTotalLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 3897983508" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 invoices</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of invoices</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType InvoicesLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 1162287560" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Review saved with %1. Open a customer card to see its latest review in the Collections review panel.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of customers, for example 3 customers</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType KeptCustomersMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 3584981110" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 customer</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of customers (1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType OneCustomerLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 264244510" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 day</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of days (1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType OneDayLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 1299061828" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 overdue on one document, by %2.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = amount, %2 = days, for example 45 days</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType OneDocumentDetailLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 927104875" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 document</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of documents (1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType OneDocumentLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 268395430" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No email account is set up, so one reminder email is kept on the review. Open it there with Open Email.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType OneDraftKeptMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 2512248687" size-unit="char" translate="yes" xml:space="preserve">
+          <source>One reminder email is saved as a draft in your email outbox.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType OneDraftSavedMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 2191696953" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 invoice</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of invoices (1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType OneInvoiceLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 3719465054" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment is promised for %1.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = date</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType PendingPromiseLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2680398366 - NamedType 721713632" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 in payments or credit memos is not yet applied.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = amount</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Collections - NamedType UnappliedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1056379993 - NamedType 1106378522" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Connected to %1 in %2 s (%3 input and %4 output tokens).</source>
+          <note from="Developer" annotates="general" priority="2">%1 = model, %2 = seconds, %3 = input tokens, %4 = output tokens</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Connection Test - NamedType ConnectedMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1056379993 - NamedType 3442080238" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The model answered, but the reply did not follow the JSON schema. Check that the model supports structured outputs.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Connection Test - NamedType NotJsonReplyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 1237194221" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI unavailable: the findings below were computed by Business Central and are shown without an explanation. %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = error from the AI service</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType AiUnavailableMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 2140652510" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 is switched off. An administrator can turn it on in Copilot &amp; agent capabilities.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = name of the capability</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType CapabilityOffErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 3191988129" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This company has reached its daily limit of %1. The limit is set on the Explain and Resolve Setup page.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = daily limit per company, for example 500 runs</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType CompanyLimitErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 3734581986" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The AI service answered twice in a format that could not be read.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType InvalidReplyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 3051168133" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter the API key on the Explain and Resolve Setup page first.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType NoApiKeyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 3888874082" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Business Central found nothing that needs attention, so the AI service was not called.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType NoFindingsMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 2201168233" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 run</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of runs (1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType OneRunLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 3948397633" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This review has %1 findings, each with its own email, and a reply that long may be cut off at the Max Output Tokens limit of %2. Review %3 or fewer at a time, or ask an administrator to raise Max Output Tokens on the Explain and Resolve Setup page.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of findings, %2 = Max Output Tokens, %3 = number of findings that fit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType OutputBudgetErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 2401256678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>A new result could not be created, so the previous one is kept. %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = error from the AI service</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType RegenerateFailedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 1915103700" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 runs</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of runs</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType RunsLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 1195616080" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The record to review no longer exists.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType SourceMissingErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 3808152762" size-unit="char" translate="yes" xml:space="preserve">
+          <source>[Business Central lists the lines here when you keep it]</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType TablePreviewLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 542920915 - NamedType 782228435" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You have reached your daily limit of %1. The limit is set on the Explain and Resolve Setup page.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = daily limit per user, for example 50 runs</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType UserLimitErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 3560342024" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All %1 lines checked have differences</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of lines checked</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType AllLinesDifferLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 2133588694" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All %1 lines checked have no differences</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of lines checked</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType AllLinesOkLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 2824886855" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item charge with %1 of %2 not assigned to a receipt line.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = quantity not assigned, %2 = quantity</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType ChargeNotAssignedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 1755483560" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line discount %1 against %2 on the order.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = invoice line discount, %2 = order line discount</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType DiscountVsOrderLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 2032112106" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No email account is set up, so the vendor email is kept on the review. Open it there with Open Email.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType DraftKeptMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 2550081131" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The vendor email is saved as a draft in your email outbox.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType DraftSavedMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 4071748223" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Same vendor, the same vendor invoice number once spaces and symbols are removed, and the same amount (%1).</source>
+          <note from="Developer" annotates="general" priority="2">%1 = amount</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType DuplicateLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 3052725707" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted invoice %1 (vendor invoice %2)</source>
+          <note from="Developer" annotates="general" priority="2">%1 = posted invoice number, %2 = vendor invoice number</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType DuplicateSubjectLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 2799107802" size-unit="char" translate="yes" xml:space="preserve">
+          <source>- %1: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = line or document, %2 = figures</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType EmailTableLineLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 558748773" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Review saved. Reopen the invoice to see the review in the Variance review panel.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType KeptMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 3597269343" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Review saved. Invoice %1 is on hold (%2). Reopen the invoice to see the review in the Variance review panel.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = invoice number, %2 = On Hold code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType KeptOnHoldMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 2576429508" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line %1: %2 %3</source>
+          <note from="Developer" annotates="general" priority="2">%1 = line number, %2 = item or account number, %3 = description</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType LineSubjectLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 2293566699" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The invoice has no lines to check</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType NoLinesCheckedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 1462307799" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L account line of %1 with no purchase order or receipt.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = line amount</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType NoOrderLinkLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 1425329136" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain variance works only on an open purchase invoice. Reopen purchase invoice %1 first.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = invoice number</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType NotOpenErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 1289514060" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoiced %1, received and not yet invoiced %2: %3 not received.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = invoiced quantity, %2 = received quantity, %3 = missing quantity</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType NotReceivedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 1673610016" size-unit="char" translate="yes" xml:space="preserve">
+          <source>1 of the %1 lines checked has no differences</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of lines checked</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType OneLineOkLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 1986469283" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 posted invoice line</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of posted invoice lines (1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType OnePostedLineLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 1719134051" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The only line checked has differences</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType OnlyLineDiffersLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 1831786800" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The only line checked has no differences</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType OnlyLineOkLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 4232347146" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 posted invoice lines</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of posted invoice lines</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType PostedLinesLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 638759636" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit cost %1 against an average of %2 on the last %3 posted invoice lines (%4).</source>
+          <note from="Developer" annotates="general" priority="2">%1 = invoice unit cost, %2 = average unit cost, %3 = number of posted invoice lines, %4 = difference in percent</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType PriceVsHistoryLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 3525276401" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit cost %1 against %2 on the latest posted invoice line (%3).</source>
+          <note from="Developer" annotates="general" priority="2">%1 = invoice unit cost, %2 = unit cost on the posted invoice line, %3 = difference in percent</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType PriceVsOneInvoiceLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 260470312" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit cost %1 against %2 on the order (%3).</source>
+          <note from="Developer" annotates="general" priority="2">%1 = invoice unit cost, %2 = order unit cost, %3 = difference in percent</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType PriceVsOrderLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3712040532 - NamedType 1943283505" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 of the %2 lines checked have no differences</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of lines without differences, %2 = number of lines checked</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType SomeLinesOkLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 335165347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email draft</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Email Preview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 335165347 - Control 2742640227 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Email Preview - Control EmailText - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 335165347 - Control 2297243455 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the email text. When you keep the review, Business Central replaces the line in square brackets with the open items and the total, and adds the recipient from the customer card. It is saved as a draft and never sent automatically.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Email Preview - Control BodyText - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 335165347 - Control 2297243455 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Email Preview - Control BodyText - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 335165347 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Email Preview - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 335165347 - Control 3292692308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Subject</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Email Preview - Control EmailSubject - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 335165347 - Control 1234124704 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>For</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Email Preview - Control Subject - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2758955537 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Latest review</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Finding FactBox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1268241650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Findings</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Findings Part - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1268241650 - NamedType 668141945" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This email is already saved as a draft in your email outbox. Do you want to open another copy?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Findings Part - NamedType DraftInOutboxQst</note>
+        </trans-unit>
+        <trans-unit id="Page 1268241650 - Control 1285973296 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the subject of the email drafted for this finding. Choose it to read or change the email.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Findings Part - Control Email - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1268241650 - Control 1285973296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Findings Part - Control Email - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1268241650 - Action 3675349844 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show the email drafted for this finding. In the dialog you can change it before you keep it; on a kept review it opens in the email editor, and it is sent only if you choose Send.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Findings Part - Action OpenEmail - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1268241650 - Action 3675349844 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open Email</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Findings Part - Action OpenEmail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain and Resolve</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - NamedType 2921000004" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The vendor says the rest of the delivery arrives next week.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType DeliveryLateTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - NamedType 33087797" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The freight charge was agreed with the vendor when the order was placed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType FreightAgreedTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - NamedType 485680755" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open this dialog from the record that you want to review.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType NoSourceErr</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - NamedType 438043323" size-unit="char" translate="yes" xml:space="preserve">
+          <source>One of these customers agreed a payment plan with our credit controller last week.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType PaymentPlanTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - NamedType 1860373543" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The vendor told us that the new price was agreed with our buyer.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType PriceAgreedTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - NamedType 3581269130" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep it saves this review, puts the invoice on hold when a finding needs the vendor's answer and saves the email as a draft (or keeps it on the review when no email account is set up). Nothing is posted or sent. Reopen the invoice to see the review in its panel.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType RecordKeepNoteTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - NamedType 2423181006" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Our salespeople visit several of these customers this week, so a phone call or visit can be arranged.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType SalesVisitsTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - NamedType 1443707197" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep it saves the ticked customers as a worklist and saves their reminders as drafts (or keeps them on the review when no email account is set up). Nothing is posted or sent. Each customer card shows its latest review.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType SelectionKeepNoteTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 1285973296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email draft</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control Email - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 3292692308 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the subject of the email. You can change it before you keep it. Business Central keeps the vendor invoice number in it.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control EmailSubject - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 3292692308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Subject</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control EmailSubject - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 2742640227 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control EmailText - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 586428704 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the email text. You can change it before you keep it. When you keep it, Business Central replaces the line in square brackets with the accepted findings that need the vendor's answer and adds the recipient. It is saved as a draft and never sent automatically.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control EmailBody - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 586428704 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control EmailBody - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 1128560290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Findings</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control Findings - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 2504486411 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies what Keep it saves and changes.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control KeepNoteField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 2504486411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>When you keep it</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control KeepNoteField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 2166945456 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the summary. Every figure in it comes from Business Central.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control Summary - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 2166945456 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Summary</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control Summary - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 2463020568 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the summary or an email contains a figure that the model wrote itself. Check it before you keep it.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control UnverifiedFigures - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 2463020568 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unverified figures</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control UnverifiedFigures - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 30581437 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer posting group</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control CustomerPostingGroup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 3182142709 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max. customers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control MaxCustomers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 2695906988 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Salesperson</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control SalespersonCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 1364009275 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the price difference, in percent, that is accepted without a finding.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control Tolerance - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 1364009275 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tolerance %</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control Tolerance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 3558600939 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a note for the AI service. It is treated as information, never as an instruction.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control UserNote - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 3558600939 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Optional: add what you already know, for example that freight was agreed or that a customer is on a payment plan.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control UserNote - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 813888672 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the tone of the drafted emails.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control EmailTone - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 813888672 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email tone</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control EmailTone - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 2185955236 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tell the AI service that the missing goods are expected.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action DeliveryLate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 2185955236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The rest of the delivery is on its way</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action DeliveryLate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 3220646109 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tell the AI service that the freight charge was agreed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action FreightAgreed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 3220646109 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Freight was agreed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action FreightAgreed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 2850273347 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tell the AI service that one of the customers agreed a payment plan.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action PaymentPlan - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 2850273347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>A customer agreed a payment plan</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action PaymentPlan - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 317514479 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tell the AI service that a new price was agreed with the vendor.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action PriceAgreed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 317514479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>A price change was agreed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action PriceAgreed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 2202844590 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tell the AI service that a phone call or visit can be arranged this week.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action SalesVisits - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 2202844590 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Our sales team visits customers this week</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action SalesVisits - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 788258546 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Close without saving anything except the usage record.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action Cancel - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 788258546 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action Cancel - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 2626368477 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Let Business Central find what needs attention and ask the AI service to explain it.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action Generate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 2626368477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action Generate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 2079045816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Save the review with the accepted findings and save the emails as drafts. Explain variance also puts the invoice on hold when a finding needs the vendor's answer. Nothing is posted or sent.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action OK - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 2079045816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep it</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action OK - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 2388911040 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Compute the findings again and ask for a new explanation.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action Regenerate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 2388911040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Regenerate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action Regenerate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 844543826 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain and Resolve Run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Run - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 844543826 - Control 1285973296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email draft</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Run - Control Email - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 844543826 - Control 586428704 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the email text that was kept with the run.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Run - Control EmailBody - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 844543826 - Control 586428704 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email Body</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Run - Control EmailBody - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 844543826 - Control 1128560290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Kept findings</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Run - Control Findings - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 844543826 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Run - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 844543826 - Control 1510562767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Run - Control Usage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 844543826 - Action 3675349844 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the email text in the email editor, addressed and related to the document. It is sent only if you choose Send.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Run - Action OpenEmail - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 844543826 - Action 3675349844 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open Email</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Run - Action OpenEmail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 844543826 - Action 1711048043 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the document or record that was reviewed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Run - Action OpenSource - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 844543826 - Action 1711048043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open Document</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Run - Action OpenSource - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 55297005 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Latest review</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Run FactBox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 655776799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain and Resolve Runs</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Runs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up Explain and Resolve</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Property AboutTitle</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Connect Business Central to your own AI service. Business Central computes every figure from its ledgers, the model only explains them, and nothing is saved until a person keeps it. Turn each feature on or off in Copilot &amp; agent capabilities.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Property AboutText</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain and Resolve Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - NamedType 1136140857" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to remove the stored API key? It is removed for all companies.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - NamedType RemoveApiKeyQst</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 1735060826 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Your own API key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control Connection - Property AboutTitle</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 1735060826 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calls go to your own Claude API account with your own key, so they use your API credits and no Copilot Credits.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control Connection - Property AboutText</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 1735060826 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Connection</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control Connection - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 3332662617 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the API key for the AI service. It is kept in isolated storage and is never shown again. To replace it, enter a new key.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control ApiKey - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 3332662617 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>API Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control ApiKey - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 2333062506 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep costs under control</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control Limits - Property AboutTitle</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 2333062506 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Daily limits cap how many calls a user and the whole company can make, so a busy day cannot run up an unexpected bill.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control Limits - Property AboutText</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 2333062506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Limits</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control Limits - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 2168297110 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reply</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control Reply - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 156978454 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>What Keep it may change</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control Review - Property AboutTitle</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 156978454 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain variance flags price differences beyond the tolerance. When a kept finding needs an answer from the vendor, Keep it puts the invoice on hold with the hold code and saves the vendor email as a draft. Nothing is posted or sent.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control Review - Property AboutText</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 156978454 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Review defaults</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control Review - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Action 1452050608 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Turn the Explain and Resolve features on or off, together with the other Copilot capabilities.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Action CopilotCapabilities - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Action 1452050608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot &amp; agent capabilities</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Action CopilotCapabilities - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Action 1100388846 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View every run with its status, tokens and duration, and the reviews that were kept.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Action Runs - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Action 1100388846 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Runs</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Action Runs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Action 1808969219 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete the stored API key. No calls can be made until a new key is entered.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Action RemoveApiKey - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Action 1808969219 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remove API Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Action RemoveApiKey - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Action 4263468516 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Send a short test request with the stored key to check that the model answers and that the extension may make HTTP requests.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Action TestConnection - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Action 4263468516 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Connection</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Action TestConnection - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 792411027 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain and Resolve Paid Invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query EXR Paid Invoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2692871201 - Control 1371938793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Collections review</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Customer Card - Control EXRFindingFactBox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2178898867 - Action 1919639379 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>Rank the customers with overdue invoices and draft a reminder for each one that needs it. Business Central computes every figure from the customer ledger, the AI service explains the ranking and drafts the emails, and nothing is saved or sent until you keep it.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Customer List - Action EXRPlanCollections - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2178898867 - Action 1919639379 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>Plan collections</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Customer List - Action EXRPlanCollections - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3862600663 - Action 1417278031 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2437096118">
+          <source>Compare this invoice with its receipts, the purchase order, recent prices and posted invoices. Business Central computes every figure, the AI service explains them and drafts a vendor email, and nothing is saved until you keep it.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Purchase Invoice - Action EXRExplainVariance - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3862600663 - Action 1417278031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2437096118">
+          <source>Explain variance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Purchase Invoice - Action EXRExplainVariance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3862600663 - Control 2292468453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2437096118">
+          <source>Variance review</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Purchase Invoice - Control EXRRunFactBox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 3064827472 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accept within tolerance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Accept within tolerance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 2492717771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ask vendor to confirm price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Ask vendor to confirm price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 418677448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assign as item charge</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Assign as item charge - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 3903287016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit review - hold new orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Credit review - hold new orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 3617625462 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email reminder</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Email reminder - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 2347009742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hold until received</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Hold until received - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 3497739938 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Phone call</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Phone call - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 304371276 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Query possible duplicate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Query possible duplicate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 1800247042 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Request credit memo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Request credit memo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 330869536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resolve dispute first</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Resolve dispute first - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 1917209802 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wait - promise pending</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Wait - promise pending - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4095896865 - EnumValue 3122532503 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Plan collections</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Capability - EnumValue Collections - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4095896865 - EnumValue 944607410 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain invoice variance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Capability - EnumValue Purchase Variance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1285105924 - EnumValue 2128947790 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Claude API</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Chat Provider - EnumValue Claude - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2605823901 - EnumValue 3116416530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>High</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Confidence - EnumValue High - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2605823901 - EnumValue 3592530208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Low</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Confidence - EnumValue Low - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2605823901 - EnumValue 432767615 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Medium</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Confidence - EnumValue Medium - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3689494701 - EnumValue 3116416530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>High</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Effort - EnumValue High - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3689494701 - EnumValue 3592530208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Low</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Effort - EnumValue Low - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3689494701 - EnumValue 432767615 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Medium</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Effort - EnumValue Medium - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1817739141 - EnumValue 2214868474 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Final notice</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Email Tone - EnumValue Final notice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1817739141 - EnumValue 1245999492 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Firm</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Email Tone - EnumValue Firm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1817739141 - EnumValue 3849057377 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Friendly</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Email Tone - EnumValue Friendly - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1817739141 - EnumValue 3122611279 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Neutral</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Email Tone - EnumValue Neutral - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4059505414 - EnumValue 1336049906 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blocked by Limit</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Run Status - EnumValue Blocked by Limit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4059505414 - EnumValue 3508501909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discarded</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Run Status - EnumValue Discarded - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4059505414 - EnumValue 3826689261 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Run Status - EnumValue Failed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4059505414 - EnumValue 2402474825 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generated</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Run Status - EnumValue Generated - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4059505414 - EnumValue 284834630 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Kept</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Run Status - EnumValue Kept - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1591513656 - EnumValue 3116416530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>High</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Severity - EnumValue High - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1591513656 - EnumValue 3123527090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Info</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Severity - EnumValue Info - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1591513656 - EnumValue 3592530208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Low</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Severity - EnumValue Low - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1591513656 - EnumValue 432767615 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Medium</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Severity - EnumValue Medium - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1792775015 - EnumValue 2680398366 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 3058546390">
+          <source>Plan collections</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension EXR Copilot Capability - EnumValue EXR Collections - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1792775015 - EnumValue 873282515 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 3058546390">
+          <source>Explain invoice variance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension EXR Copilot Capability - EnumValue EXR Purchase Variance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 649034676 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain and Resolve - Admin</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet EXR ADMIN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 4164665522 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explain and Resolve - User</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet EXR USER - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
