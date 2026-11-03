@@ -84,7 +84,23 @@ page 58204 "EXR Run"
                     field("Customer Posting Group"; Rec."Customer Posting Group") { }
                     field("Max. Customers"; Rec."Max. Customers") { }
                 }
-                field("Email Tone"; Rec."Email Tone") { }
+                group(PaymentRunOptions)
+                {
+                    ShowCaption = false;
+                    Visible = PaymentWindowsVisible;
+
+                    field("Journal Template Name"; Rec."Journal Template Name") { }
+                    field("Journal Batch Name"; Rec."Journal Batch Name") { }
+                    field("Duplicate Window Days"; Rec."Duplicate Window Days") { }
+                    field("Bank Change Window Days"; Rec."Bank Change Window Days") { }
+                }
+                group(EmailToneOption)
+                {
+                    ShowCaption = false;
+                    Visible = EmailToneVisible;
+
+                    field("Email Tone"; Rec."Email Tone") { }
+                }
                 field("User Note"; Rec."User Note")
                 {
                     MultiLine = true;
@@ -142,8 +158,10 @@ page 58204 "EXR Run"
     begin
         Handler := Rec.Capability;
         ToleranceVisible := Handler.UsesTolerance();
-        SelectionVisible := Handler.ReviewsSelection();
-        RunEmailVisible := not Handler.DraftsEmailPerFinding();
+        PaymentWindowsVisible := Handler.UsesPaymentWindows();
+        SelectionVisible := Handler.ReviewsSelection() and not PaymentWindowsVisible;
+        EmailToneVisible := Handler.DraftsEmail();
+        RunEmailVisible := Handler.DraftsEmail() and not Handler.DraftsEmailPerFinding();
         EmailBody := Rec.GetEmailBody();
         HasSource := not IsNullGuid(Rec."Source System Id");
         CurrPage.Findings.Page.LoadRun(Rec."Entry No.");
@@ -154,5 +172,7 @@ page 58204 "EXR Run"
         HasSource: Boolean;
         ToleranceVisible: Boolean;
         SelectionVisible: Boolean;
+        PaymentWindowsVisible: Boolean;
+        EmailToneVisible: Boolean;
         RunEmailVisible: Boolean;
 }

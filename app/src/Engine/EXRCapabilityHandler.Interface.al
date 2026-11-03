@@ -20,6 +20,12 @@ interface "EXR Capability Handler"
     // Whether each finding gets its own email (one per customer) instead of one email for the run.
     procedure DraftsEmailPerFinding(): Boolean;
 
+    // Whether the run drafts any email. Without one, the reply schema, the request and the dialog carry no email.
+    procedure DraftsEmail(): Boolean;
+
+    // Whether the dialog shows the payment run options (duplicate and bank-change windows) instead of the customer filters.
+    procedure UsesPaymentWindows(): Boolean;
+
     // Deterministic detectors: fill the findings and register every figure in the run context.
     // The run carries the source and the options; the handler fills Source No.
     procedure BuildFacts(var ExrRun: Record "EXR Run"; var TempFinding: Record "EXR Finding" temporary; var RunContext: Codeunit "EXR Run Context");

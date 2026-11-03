@@ -102,6 +102,16 @@ codeunit 58206 "EXR Purch. Variance" implements "EXR Capability Handler"
         exit(false);
     end;
 
+    procedure DraftsEmail(): Boolean
+    begin
+        exit(true);
+    end;
+
+    procedure UsesPaymentWindows(): Boolean
+    begin
+        exit(false);
+    end;
+
     // Per finding type, so the model cannot turn a missing delivery or a duplicate into an accept.
     procedure IsActionAllowed(FindingType: Code[30]; FindingAction: Enum "EXR Action"): Boolean
     begin

@@ -91,6 +91,17 @@ page 58202 "EXR Findings Part"
                     Editable = false;
                     Visible = false;
                 }
+                // a payment run's vendor and the invoice entry a kept Hold put on hold
+                field("Account No."; Rec."Account No.")
+                {
+                    Editable = false;
+                    Visible = false;
+                }
+                field("Ledger Entry No."; Rec."Ledger Entry No.")
+                {
+                    Editable = false;
+                    Visible = false;
+                }
             }
         }
     }

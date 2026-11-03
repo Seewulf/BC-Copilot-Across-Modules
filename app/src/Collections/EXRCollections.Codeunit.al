@@ -97,6 +97,16 @@ codeunit 58207 "EXR Collections" implements "EXR Capability Handler"
         exit(true);
     end;
 
+    procedure DraftsEmail(): Boolean
+    begin
+        exit(true);
+    end;
+
+    procedure UsesPaymentWindows(): Boolean
+    begin
+        exit(false);
+    end;
+
     // Per finding type, so the model cannot chase a disputed debt or ignore a broken promise.
     procedure IsActionAllowed(FindingType: Code[30]; FindingAction: Enum "EXR Action"): Boolean
     begin

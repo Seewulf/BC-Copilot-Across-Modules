@@ -123,6 +123,30 @@ table 58202 "EXR Finding"
             Editable = false;
             ToolTip = 'Specifies when the review that kept this finding was started. Choose it to open the review.';
         }
+        // a payment line's vendor, its flagged invoice and the entries it pays: Keep it checks them again before it holds the payment
+        field(22; "Account No."; Code[20])
+        {
+            Caption = 'Account No.';
+            ToolTip = 'Specifies the vendor that the payment line pays.';
+        }
+        field(23; "Ledger Entry No."; Integer)
+        {
+            Caption = 'Ledger Entry No.';
+            BlankZero = true;
+            ToolTip = 'Specifies the vendor ledger entry of the invoice that the finding is about: the possible duplicate, or the first invoice the payment line pays.';
+        }
+        field(24; "Applied Entries"; Integer)
+        {
+            Caption = 'Applied Entries';
+            BlankZero = true;
+            ToolTip = 'Specifies how many open vendor ledger entries the payment line paid when it was checked.';
+        }
+        // the sum of those entry numbers: with the count, it shows that the line still pays the same entries
+        field(25; "Applied Entry Checksum"; BigInteger)
+        {
+            Caption = 'Applied Entry Checksum';
+            ToolTip = 'Specifies the sum of the entry numbers of the vendor ledger entries the payment line paid when it was checked.';
+        }
     }
 
     keys

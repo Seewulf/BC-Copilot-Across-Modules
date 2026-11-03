@@ -143,6 +143,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Accepted - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 1622979514 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the vendor that the payment line pays.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 1622979514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Account No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3772430142 - Field 2279323338 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the suggested resolution.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -162,6 +172,26 @@
           <source>Amount (LCY)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Amount (LCY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 972703297 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many open vendor ledger entries the payment line paid when it was checked.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Applied Entries - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 972703297 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applied Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Applied Entries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 1946667368 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the sum of the entry numbers of the vendor ledger entries the payment line paid when it was checked.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Applied Entry Checksum - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 1946667368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applied Entry Checksum</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Applied Entry Checksum - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3772430142 - Field 3865998304 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies how sure the model is about its explanation. It is blank when no explanation came back.</source>
@@ -247,6 +277,16 @@
           <source>Finding Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Finding Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3286668834 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the vendor ledger entry of the invoice that the finding is about: the possible duplicate, or the first invoice the payment line pays.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Ledger Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3772430142 - Field 3286668834 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ledger Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Finding - Field Ledger Entry No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3772430142 - Field 3320823955 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of the finding within the run.</source>
@@ -343,6 +383,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2079739925 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many days back, counted from today, a change to one of the vendor's bank accounts flags a payment. 0 turns the check off.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Bank Change Window Days - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2079739925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank-Change Window (Days)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Bank Change Window Days - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 844543826 - Field 785629580 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the feature that created the run.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -372,6 +422,16 @@
           <source>Customer Posting Group</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Customer Posting Group - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 4209328080 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many days apart two invoices with the same amount and a matching vendor invoice number may be posted and still be flagged as a possible duplicate. 0 turns the check off.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Duplicate Window Days - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 4209328080 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Duplicate Window (Days)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Duplicate Window Days - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 844543826 - Field 1637095154 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies how long the AI service took to answer.</source>
@@ -457,6 +517,26 @@
           <source>Input Tokens</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Input Tokens - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2704330142 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the payment journal batch that was checked.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Journal Batch Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 2704330142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Batch Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Journal Batch Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 3684440170 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the journal template of the payment journal that was checked.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Journal Template Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844543826 - Field 3684440170 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Template Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Run - Field Journal Template Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 844543826 - Field 802492631 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies how many of the highest-ranked customers are reviewed.</source>
@@ -653,6 +733,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field API Version - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 2079739925 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many days back, counted from today, a change to one of the vendor's bank accounts flags a payment. Users can change it in the dialog. 0 turns the check off.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Bank Change Window Days - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 2079739925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Change Window Days</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Bank Change Window Days - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3004664772 - Field 1954632868 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the most runs that all users in this company together can start per day. Runs are counted from the Explain and Resolve Runs created today; a blocked attempt is logged as Blocked by Limit and does not count.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -683,6 +773,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Default Email Tone - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 4209328080 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many days apart two posted invoices from the same vendor, with the same amount and a matching vendor invoice number, may be posted and still be flagged as a possible duplicate. Users can change it in the dialog. 0 turns the check off.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Duplicate Window Days - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 4209328080 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Duplicate Window Days</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Duplicate Window Days - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3004664772 - Field 1881409184 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies how much the model thinks before it answers. Higher effort can give better explanations but takes longer and uses more tokens.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -704,7 +804,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Endpoint - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3004664772 - Field 473566670 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the On Hold code that Keep it puts on a purchase invoice when a kept finding needs an answer from the vendor. Business Central copies it to the vendor ledger entry, so Suggest Vendor Payments skips the invoice. Leave it blank to never put invoices on hold.</source>
+          <source>Specifies the On Hold code that Keep it puts on a purchase invoice when a kept finding needs an answer from the vendor, and on the vendor ledger entries of payments that Check payment run holds. Business Central copies it from the invoice to the vendor ledger entry, so Suggest Vendor Payments skips the invoice. Leave it blank to never put invoices on hold; Check payment run then cannot keep a Hold.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Hold Code - Property ToolTip</note>
         </trans-unit>
@@ -747,6 +847,16 @@
           <source>Provider</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Provider - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 2477809136 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how far, in percent, a payment must be above the median of the vendor's payments in the last 12 months to be flagged. 100 flags payments of more than twice the median. Vendors with fewer than 3 payments in that time are not checked. 0 turns the check off.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Unusual Amount % - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3004664772 - Field 2477809136 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unusual Amount %</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Setup - Field Unusual Amount % - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3004664772 - Field 713293571 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the default price difference, in percent, that Explain variance accepts without a finding. Users can change it in the dialog.</source>
@@ -1013,6 +1123,246 @@
           <note from="Developer" annotates="general" priority="2">%1 = daily limit per user, for example 50 runs</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Engine - NamedType UserLimitErr</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1049908761" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 is %2 above the median payment of %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = payment amount, %2 = percentage, %3 = amount</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType AmountDetailLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1372465615" size-unit="char" translate="yes" xml:space="preserve">
+          <source>A bank account of the vendor changed on %1.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = date</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType BankDetailLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1862183896" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 days ago</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of days</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType DaysAgoLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 4016476045" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 days apart</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of days</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType DaysApartLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1534050375" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 days</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of days</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType DaysLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 153584199" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Only the digits of the vendor invoice numbers match</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType DigitsMatchLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1124302009" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The possible duplicate is already closed, so it was paid or settled</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType DuplicateClosedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1388863832" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Possible duplicate of vendor invoice %1, posted %2 for the same amount.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = vendor invoice number, %2 = date</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType DuplicateDetailLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1736606419" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The possible duplicate is still open</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType DuplicateOpenLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 2455463667" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This invoice was entered before the possible duplicate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType EnteredFirstLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1761105807" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This invoice was entered after the possible duplicate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType EnteredLaterLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 2396555974" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The vendor invoice numbers are the same once spaces and symbols are removed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType ExactMatchLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 754096403" size-unit="char" translate="yes" xml:space="preserve">
+          <source>First payment to this vendor.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType FirstDetailLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1516440946" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Put on hold: %1.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = list of vendor invoice numbers</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType HeldDetailLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 3897983508" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 invoices</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of invoices</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType InvoicesLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 3398628786" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Already exported to a payment file or check printed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType IssuedDetailLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1992212793" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The line was already exported to a payment file or its check was printed, so it can no longer be held here</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType IssuedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 701377170" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Review saved as payment run evidence. Payment lines removed from the payment journal, with their invoices at risk put on hold: %1.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of payment lines</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType KeptHeldMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 558748773" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Review saved as payment run evidence. No payment was held.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType KeptMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 3607929579" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The payment line %1 changed or left the journal after the check, so nothing was kept. Choose Regenerate to check the journal again.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = vendor and payment line, for example 10000 Fabrikam: payment G00001</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType LineChangedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 2388683610" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The payment line %1 was already exported to a payment file or its check was printed, so nothing was kept. Void the payment file or the check first, then choose Regenerate.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = vendor and payment line, for example 10000 Fabrikam: payment G00001</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType LineIssuedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 3616618409" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 payment lines</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of payment lines</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType LinesLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1826858652" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open Check payment run from a payment journal batch.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType NoBatchErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 267543018" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter a Hold Code on the Explain and Resolve Setup page before you keep a Hold. Nothing was kept.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType NoHoldCodeErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 708238316" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The payment line names no bank account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType NoRecipientLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1267117781" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nothing that this line pays is still open, so it was already paid or settled</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType NothingOpenLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 3088295835" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The possible duplicate is not paid in this payment run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType NotInRunLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 4081642197" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 day ago</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of days (1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OneDayAgoLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 3469032656" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 day apart</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of days (1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OneDayApartLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 264244510" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 day</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of days (1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OneDayLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 2191696953" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 invoice</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of invoices (1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OneInvoiceLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1058882540" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 payment line</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of payment lines (1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OneLineLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1722850704" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 payment</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of payments (1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OnePaymentLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 3513868703" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The invoice is already on hold (%1).</source>
+          <note from="Developer" annotates="general" priority="2">%1 = On Hold code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OnHoldDetailLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 2788788436" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Another line of this payment run pays the possible duplicate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OtherLineLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 574897435" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The line pays %1, but only %2 is still open.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = amount of the payment line, %2 = amount still open</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OverpaidDetailLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 437986993" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The line pays more than is still open on the entries it pays</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OverpaysLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1913666913" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nothing this line pays is still open.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType PaidDetailLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 3528245045" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 payments</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of payments</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType PaymentsLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 188078668" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This payment line pays both invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType PaysBothLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 3530039237" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This payment goes to a bank account that changed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType PaysChangedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 2560819039" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This payment goes to a bank account that did not change</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType PaysOtherLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 3314076524" size-unit="char" translate="yes" xml:space="preserve">
+          <source>payment %1 of vendor invoice %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = document number of the payment line, %2 = vendor invoice number</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType ReferenceInvoiceLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1162595851" size-unit="char" translate="yes" xml:space="preserve">
+          <source>payment %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = document number of the payment line</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType ReferenceLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 3550755000" size-unit="char" translate="yes" xml:space="preserve">
+          <source>on the same day</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType SameDayLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 1515707329" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2: payment %3 of vendor invoice %4</source>
+          <note from="Developer" annotates="general" priority="2">%1 = vendor number, %2 = vendor name, %3 = document number of the payment line, %4 = vendor invoice number</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType SubjectInvoiceLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 3871721722" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2: payment %3</source>
+          <note from="Developer" annotates="general" priority="2">%1 = vendor number, %2 = vendor name, %3 = document number of the payment line</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType SubjectLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1655506584 - NamedType 2957311311" size-unit="char" translate="yes" xml:space="preserve">
+          <source>today</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType TodayLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3712040532 - NamedType 3560342024" size-unit="char" translate="yes" xml:space="preserve">
           <source>All %1 lines checked have differences</source>
           <note from="Developer" annotates="general" priority="2">%1 = number of lines checked</note>
@@ -1213,6 +1563,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2143688917 - NamedType 1568495468" size-unit="char" translate="yes" xml:space="preserve">
+          <source>One of these vendors sends us a single large invoice once a year.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType AnnualInvoiceTxt</note>
+        </trans-unit>
         <trans-unit id="Page 2143688917 - NamedType 2921000004" size-unit="char" translate="yes" xml:space="preserve">
           <source>The vendor says the rest of the delivery arrives next week.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1223,6 +1578,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType FreightAgreedTxt</note>
         </trans-unit>
+        <trans-unit id="Page 2143688917 - NamedType 3814187452" size-unit="char" translate="yes" xml:space="preserve">
+          <source>We started buying from a new supplier this month.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType NewSupplierTxt</note>
+        </trans-unit>
         <trans-unit id="Page 2143688917 - NamedType 485680755" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open this dialog from the record that you want to review.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1232,6 +1592,11 @@
           <source>One of these customers agreed a payment plan with our credit controller last week.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType PaymentPlanTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - NamedType 444475556" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep it saves this check as payment run evidence. For each ticked line whose action is Hold, it checks the line again and deletes it from this payment journal. For a bank change, an unusual amount or a first payment it puts every invoice the line pays on hold with the Hold Code from the setup, otherwise only the possible duplicate, so the next Suggest Vendor Payments skips them. Credit memos are never put on hold, and a line that pays nothing still open is only removed. A line already exported to a payment file or with a printed check stops Keep it. All other lines stay in the journal unchanged. Nothing is posted, no payment file is exported and no bank details are changed. The journal's Payment run review panel shows the latest check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - NamedType PaymentRunKeepNoteTxt</note>
         </trans-unit>
         <trans-unit id="Page 2143688917 - NamedType 1860373543" size-unit="char" translate="yes" xml:space="preserve">
           <source>The vendor told us that the new price was agreed with our buyer.</source>
@@ -1318,10 +1683,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control UnverifiedFigures - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 1871721661 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank-change window (days)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control BankChangeWindowDays - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2143688917 - Control 30581437 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer posting group</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control CustomerPostingGroup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Control 3811328208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Duplicate window (days)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control DuplicateWindowDays - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2143688917 - Control 3182142709 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Max. customers</source>
@@ -1349,7 +1724,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control UserNote - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2143688917 - Control 3558600939 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Optional: add what you already know, for example that freight was agreed or that a customer is on a payment plan.</source>
+          <source>Optional: add what you already know, for example that freight was agreed, that a customer is on a payment plan or that a vendor sends one large invoice a year.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control UserNote - Property InstructionalText</note>
         </trans-unit>
@@ -1362,6 +1737,16 @@
           <source>Email tone</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Control EmailTone - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 3281099324 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tell the AI service that a large payment to a vendor can be expected.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action AnnualInvoice - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 3281099324 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>A vendor sends one large invoice a year</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action AnnualInvoice - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2143688917 - Action 2185955236 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tell the AI service that the missing goods are expected.</source>
@@ -1382,6 +1767,16 @@
           <source>Freight was agreed</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action FreightAgreed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 3127348588 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tell the AI service that a first payment to a new vendor is expected.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action NewSupplier - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2143688917 - Action 3127348588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>We started buying from a new supplier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action NewSupplier - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2143688917 - Action 2850273347 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tell the AI service that one of the customers agreed a payment plan.</source>
@@ -1434,7 +1829,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action Generate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2143688917 - Action 2079045816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Save the review with the accepted findings and save the emails as drafts. Explain variance also puts the invoice on hold when a finding needs the vendor's answer. Nothing is posted or sent.</source>
+          <source>Save the review with the accepted findings and save the emails as drafts. Explain variance also puts the invoice on hold when a finding needs the vendor's answer; Check payment run holds the payments whose action is Hold. Nothing is posted or sent.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page EXR Prompt - Action OK - Property ToolTip</note>
         </trans-unit>
@@ -1578,6 +1973,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control Limits - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 4289388437 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Screen the payment run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control PaymentRun - Property AboutTitle</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 4289388437 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check payment run flags possible duplicate invoices, changed bank accounts, unusual amounts and first payments. Only the date a bank account changed is used, never its details. When you keep a Hold, the line leaves the payment journal and its invoices go on hold with the hold code. Nothing is posted.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control PaymentRun - Property AboutText</note>
+        </trans-unit>
+        <trans-unit id="Page 3004664772 - Control 4289388437 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check payment run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EXR Setup - Control PaymentRun - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3004664772 - Control 2168297110 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reply</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1658,6 +2068,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Customer List - Action EXRPlanCollections - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 425271448 - Action 1953101014 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3196174509">
+          <source>Check the vendor payments in this batch for possible duplicate invoices, changed bank accounts, unusual amounts, first payments and invoices on hold. Business Central computes every signal, the AI service explains them for the approver, and nothing changes until you keep it.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Payment Journal - Action EXRCheckPaymentRun - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 425271448 - Action 1953101014 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3196174509">
+          <source>Check payment run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Payment Journal - Action EXRCheckPaymentRun - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 425271448 - Control 2292468453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3196174509">
+          <source>Payment run review</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Payment Journal - Control EXRRunFactBox - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3862600663 - Action 1417278031 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2437096118">
           <source>Compare this invoice with its receipts, the purchase order, recent prices and posted invoices. Business Central computes every figure, the AI service explains them and drafts a vendor email, and nothing is saved until you keep it.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1677,6 +2102,11 @@
           <source>Accept within tolerance</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Accept within tolerance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 4179197965 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ask vendor to confirm duplicate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Ask vendor to confirm duplicate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 759557651 - EnumValue 2492717771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Ask vendor to confirm price</source>
@@ -1698,10 +2128,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Email reminder - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 1949211201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hold</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Hold - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Enum 759557651 - EnumValue 2347009742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hold until received</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Hold until received - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 1161569196 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pay</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Pay - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 759557651 - EnumValue 3497739938 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Phone call</source>
@@ -1723,6 +2163,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Resolve dispute first - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Enum 759557651 - EnumValue 763004544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Verify bank details by phone</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Action - EnumValue Verify bank details by phone - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Enum 759557651 - EnumValue 1917209802 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Wait - promise pending</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1732,6 +2177,11 @@
           <source>Plan collections</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Capability - EnumValue Collections - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4095896865 - EnumValue 2413987837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check payment run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EXR Capability - EnumValue Payment Run - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 4095896865 - EnumValue 944607410 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Explain invoice variance</source>
@@ -1842,6 +2292,11 @@
           <source>Plan collections</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">EnumExtension EXR Copilot Capability - EnumValue EXR Collections - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1792775015 - EnumValue 1655506584 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 3058546390">
+          <source>Check payment run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension EXR Copilot Capability - EnumValue EXR Payment Run - Property Caption</note>
         </trans-unit>
         <trans-unit id="EnumExtension 1792775015 - EnumValue 873282515 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 3058546390">
           <source>Explain invoice variance</source>

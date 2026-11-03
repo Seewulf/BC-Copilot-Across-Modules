@@ -49,4 +49,21 @@ enum 58202 "EXR Action"
     {
         Caption = 'Credit review - hold new orders';
     }
+    // Check payment run
+    value(11; Pay)
+    {
+        Caption = 'Pay';
+    }
+    value(12; Hold)
+    {
+        Caption = 'Hold';
+    }
+    value(13; "Verify bank details by phone")
+    {
+        Caption = 'Verify bank details by phone';
+    }
+    value(14; "Ask vendor to confirm duplicate")
+    {
+        Caption = 'Ask vendor to confirm duplicate';
+    }
 }

@@ -234,6 +234,57 @@ codeunit 58286 "EXR Collections Keep Tests"
         Assert.IsFalse(Body.Contains(PromisedNo), 'promised invoice left out');
     end;
 
+    [Test]
+    procedure ReminderNamesOnlyItsOwnCustomer()
+    var
+        ExrRun: Record "EXR Run";
+        TempFinding: Record "EXR Finding" temporary;
+        Findings: JsonArray;
+        SalespersonCode: Code[20];
+        FirstSubject: Text;
+        SecondSubject: Text;
+        Body: Text;
+    begin
+        // [GIVEN] two overdue customers, one with a $ in its name, and a reply whose texts name both findings by their keys,
+        // the reminder for the first too
+        ScenarioLibrary.InitialiseForTest();
+        SalespersonCode := CollectionsLibrary.CreateSalesperson();
+        CollectionsLibrary.PostInvoice(CollectionsLibrary.CreateCustomer('Adatum $0 Interiors Ltd.', SalespersonCode), -130, -100, 1000);
+        CollectionsLibrary.PostInvoice(CollectionsLibrary.CreateCustomer('Litware Workspace Co.', SalespersonCode), -60, -30, 1000);
+        Commit();
+        Findings.Add(CollectionsLibrary.FindingReply('OVERDUE-1', 'Older than OVERDUE-2.', 'Email reminder', 'About OVERDUE-1', 'Re OVERDUE-1, not OVERDUE-2: {TABLE}'));
+        Findings.Add(CollectionsLibrary.FindingReply('OVERDUE-2', 'A newer debt.', 'Phone call', '', ''));
+        MockChatClient.QueueReply(CollectionsLibrary.Reply('Start with OVERDUE-1.', Findings), 1000, 300, 1500);
+
+        // [WHEN] a run is generated
+        CollectionsLibrary.NewRun(SalespersonCode, ExrRun);
+        Engine.Generate(ExrRun, TempFinding);
+
+        // [THEN] the user's own texts show each key as that customer's subject, $ included
+        SecondSubject := SubjectOf(TempFinding, 'OVERDUE-2');
+        FirstSubject := SubjectOf(TempFinding, 'OVERDUE-1');
+        // $0 would put the key back if the replacement were not escaped
+        Assert.IsTrue((FirstSubject + SecondSubject).Contains('$0'), 'a subject with $0');
+        Assert.AreEqual('Start with ' + FirstSubject + '.', ExrRun.Summary, 'summary');
+        Assert.AreEqual('Older than ' + SecondSubject + '.', TempFinding.Description, 'explanation');
+        // [THEN] the reminder names only its own customer: the other key is dropped, never turned into the other
+        // customer's name, and the reminder is flagged for review
+        Assert.AreEqual('About ' + FirstSubject, TempFinding."Email Subject", 'email subject');
+        Body := TempFinding.GetEmailBody();
+        Assert.AreEqual('Re ' + FirstSubject + ', not : {TABLE}', Body, 'email body');
+        Assert.IsFalse(Body.Contains(SecondSubject), 'no other customer in the reminder');
+        Assert.IsTrue(TempFinding."Unverified Figure", 'reminder flagged');
+        Assert.IsTrue(ExrRun."Unverified Figures", 'run flagged');
+    end;
+
+    local procedure SubjectOf(var TempFinding: Record "EXR Finding" temporary; FindingKey: Text): Text
+    begin
+        TempFinding.Reset();
+        TempFinding.SetRange("Finding Key", FindingKey);
+        TempFinding.FindFirst();
+        exit(TempFinding.Subject);
+    end;
+
     local procedure GenerateTwoCustomerRun(var SalespersonCode: Code[20]; var ExrRun: Record "EXR Run"; var TempFinding: Record "EXR Finding" temporary)
     begin
         ScenarioLibrary.InitialiseForTest();

@@ -15,4 +15,9 @@ enum 58201 "EXR Capability" implements "EXR Capability Handler"
         Caption = 'Plan collections';
         Implementation = "EXR Capability Handler" = "EXR Collections";
     }
+    value(2; "Payment Run")
+    {
+        Caption = 'Check payment run';
+        Implementation = "EXR Capability Handler" = "EXR Payment Run";
+    }
 }

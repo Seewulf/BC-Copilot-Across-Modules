@@ -2,22 +2,60 @@ namespace PrabinBhusal.ExplainResolve;
 
 using System.Upgrade;
 
-// Registers capabilities added in a new version. Registration skips values that already exist.
-// A setup that existed before the review defaults came gets those defaults once.
+// Registers capabilities added in a new version, once per upgrade tag. Registration also skips values that already exist.
+// A setup that existed before a version's new fields gets their defaults once; values users set later are never touched.
 codeunit 58201 "EXR Upgrade"
 {
     Subtype = Upgrade;
     Access = Internal;
 
+    // 1.1 adds Check payment run.
     trigger OnUpgradePerDatabase()
     var
         Install: Codeunit "EXR Install";
+        UpgradeTag: Codeunit "Upgrade Tag";
     begin
+        if UpgradeTag.HasDatabaseUpgradeTag(Install.PaymentRunCapabilityTag()) then
+            exit;
         Install.RegisterCapabilities();
+        UpgradeTag.SetDatabaseUpgradeTag(Install.PaymentRunCapabilityTag());
+    end;
+
+    trigger OnUpgradePerCompany()
+    begin
+        UpgradeReviewDefaults();
+        UpgradePaymentRunDefaults();
+    end;
+
+    // Once per company: without it an existing setup would have every payment run check turned off (0 days, 0%).
+    internal procedure UpgradePaymentRunDefaults()
+    var
+        Install: Codeunit "EXR Install";
+        UpgradeTag: Codeunit "Upgrade Tag";
+    begin
+        if UpgradeTag.HasUpgradeTag(Install.PaymentRunDefaultsTag()) then
+            exit;
+        FillPaymentRunDefaults();
+        UpgradeTag.SetUpgradeTag(Install.PaymentRunDefaultsTag());
+    end;
+
+    // Only the 1.1 fields; every other setup value stays as the company set it.
+    internal procedure FillPaymentRunDefaults()
+    var
+        Setup: Record "EXR Setup";
+        DefaultSetup: Record "EXR Setup";
+    begin
+        if not Setup.Get() then
+            exit;
+        DefaultSetup.Init();
+        Setup."Duplicate Window Days" := DefaultSetup."Duplicate Window Days";
+        Setup."Bank Change Window Days" := DefaultSetup."Bank Change Window Days";
+        Setup."Unusual Amount %" := DefaultSetup."Unusual Amount %";
+        Setup.Modify();
     end;
 
     // InitValue fills new rows only, so an existing setup would get a 0% tolerance and no hold code.
-    trigger OnUpgradePerCompany()
+    local procedure UpgradeReviewDefaults()
     var
         Setup: Record "EXR Setup";
         DefaultSetup: Record "EXR Setup";

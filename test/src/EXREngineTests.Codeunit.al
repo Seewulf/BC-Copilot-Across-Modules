@@ -174,6 +174,64 @@ codeunit 58277 "EXR Engine Tests"
     end;
 
     [Test]
+    procedure FindingKeyInTheTextShowsAsItsSubject()
+    var
+        InvoiceHeader: Record "Purchase Header";
+        ExrRun: Record "EXR Run";
+        TempFinding: Record "EXR Finding" temporary;
+        ReplyJson: JsonObject;
+        ReplyText: Text;
+        LongerWord: Text;
+        Subject: Text;
+    begin
+        // [GIVEN] a reply that names a finding by its key, in another letter case too, next to a longer word that starts with the key
+        ScenarioLibrary.InitialiseForTest();
+        ScenarioLibrary.CreateDemoScenario(InvoiceHeader);
+        Commit();
+        LongerWord := NotReceivedKeyTok + '5';
+        ReplyText := ScenarioLibrary.ReplyWithSubject('Hold ' + NotReceivedKeyTok + ' first.', NotReceivedKeyTok, 'Not ' + LongerWord + ', see ' + LowerCase(NotReceivedKeyTok) + '.', HoldActionTok, 'High', 'About ' + NotReceivedKeyTok);
+        ReplyJson.ReadFrom(ReplyText);
+        // the key's digits next to 123 would read as a phone number if the key were left in the checks
+        ReplyJson.Replace('emailBody', 'Please check ' + NotReceivedKeyTok + ' 123 times. {TABLE}');
+        ReplyJson.WriteTo(ReplyText);
+        MockChatClient.QueueReply(ReplyText, 100, 10, 100);
+
+        // [WHEN] a run is generated
+        GenerateFor(InvoiceHeader, ExrRun, TempFinding);
+
+        // [THEN] the user never sees the key: the summary, the explanation and the email show the finding's subject in its place
+        ScenarioLibrary.GetFinding(TempFinding, NotReceivedKeyTok);
+        Subject := TempFinding.Subject;
+        Assert.AreEqual('Hold ' + Subject + ' first.', ExrRun.Summary, 'summary');
+        Assert.AreEqual('Not ' + LongerWord + ', see ' + Subject + '.', TempFinding.Description, 'explanation, longer word kept');
+        Assert.IsTrue(ExrRun."Email Subject".Contains(Subject), 'email subject');
+        Assert.IsFalse(ExrRun."Email Subject".Contains(NotReceivedKeyTok), 'no key in the email subject');
+        Assert.AreEqual('Please check ' + Subject + ' 123 times. {TABLE}', ExrRun.GetEmailBody(), 'email body');
+        // [THEN] a key is checked like a token, and the subject is Business Central's own text, so neither raises Unverified figures
+        Assert.IsFalse(ExrRun."Unverified Figures", 'not flagged');
+    end;
+
+    [Test]
+    procedure AddressGluedToAKeyIsFlagged()
+    var
+        InvoiceHeader: Record "Purchase Header";
+        ExrRun: Record "EXR Run";
+        TempFinding: Record "EXR Finding" temporary;
+    begin
+        // [GIVEN] a reply that glues an email address to a finding key
+        ScenarioLibrary.InitialiseForTest();
+        ScenarioLibrary.CreateDemoScenario(InvoiceHeader);
+        Commit();
+        MockChatClient.QueueReply(ScenarioLibrary.Reply('Write to ' + NotReceivedKeyTok + '@evil.example now.', NotReceivedKeyTok, 'Hold it.', HoldActionTok, 'High'), 100, 10, 100);
+
+        // [WHEN] a run is generated
+        GenerateFor(InvoiceHeader, ExrRun, TempFinding);
+
+        // [THEN] the address still counts as one, so the run is flagged
+        Assert.IsTrue(ExrRun."Unverified Figures", 'address flagged');
+    end;
+
+    [Test]
     procedure UnknownFactTokenIsDropped()
     var
         InvoiceHeader: Record "Purchase Header";

@@ -1,11 +1,12 @@
 namespace PrabinBhusal.ExplainResolve.Test;
 
+using Microsoft.Finance.GeneralLedger.Journal;
 using Microsoft.Purchases.Document;
 using Microsoft.Sales.Customer;
 using PrabinBhusal.ExplainResolve;
 
 // Live demo only: builds the demo documents for real and opens them. Posting must be allowed on the dates used
-// (the work date for the invoice demo, up to 200 days before it for the collections demo).
+// (the work date for the invoice demo, up to 200 days before it for the collections demo, up to 270 days for the payment run).
 pageextension 58270 "EXR Setup Demo" extends "EXR Setup"
 {
     actions
@@ -48,6 +49,24 @@ pageextension 58270 "EXR Setup Demo" extends "EXR Setup"
                     Message(DemoCreatedMsg, SalespersonCode);
                     Customer.SetFilter("No.", CustomerFilter);
                     Page.Run(Page::"Customer List", Customer);
+                end;
+            }
+            action(EXRCreatePaymentRunScenario)
+            {
+                ApplicationArea = All;
+                Caption = 'Create demo payment run scenario';
+                Image = CreateDocument;
+                ToolTip = 'Create three vendors: one with two open invoices INV-4471 and INV4471 for the same amount and date and a bank account added today, one with a usual payment pattern, and one that has never been paid. Then create a payment journal batch with one payment line per open invoice and open it. The invoices and the payment history are posted as vendor journal lines, up to 270 days before the work date; the payment lines are not posted.';
+
+                trigger OnAction()
+                var
+                    GenJournalBatch: Record "Gen. Journal Batch";
+                    PaymentRunLibrary: Codeunit "EXR Payment Run Library";
+                    GenJnlManagement: Codeunit GenJnlManagement;
+                begin
+                    PaymentRunLibrary.CreateDemoScenario(GenJournalBatch);
+                    Commit();
+                    GenJnlManagement.TemplateSelectionFromBatch(GenJournalBatch);
                 end;
             }
         }

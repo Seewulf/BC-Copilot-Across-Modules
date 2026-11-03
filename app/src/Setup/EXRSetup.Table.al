@@ -82,13 +82,38 @@ table 58200 "EXR Setup"
         {
             Caption = 'Hold Code';
             InitValue = 'QRY';
-            ToolTip = 'Specifies the On Hold code that Keep it puts on a purchase invoice when a kept finding needs an answer from the vendor. Business Central copies it to the vendor ledger entry, so Suggest Vendor Payments skips the invoice. Leave it blank to never put invoices on hold.';
+            ToolTip = 'Specifies the On Hold code that Keep it puts on a purchase invoice when a kept finding needs an answer from the vendor, and on the vendor ledger entries of payments that Check payment run holds. Business Central copies it from the invoice to the vendor ledger entry, so Suggest Vendor Payments skips the invoice. Leave it blank to never put invoices on hold; Check payment run then cannot keep a Hold.';
         }
         field(32; "Default Email Tone"; Enum "EXR Email Tone")
         {
             Caption = 'Default Email Tone';
             InitValue = Neutral;
             ToolTip = 'Specifies the tone of drafted emails. Users can change it in the dialog.';
+        }
+        // Check payment run; 0 turns a check off
+        field(33; "Duplicate Window Days"; Integer)
+        {
+            Caption = 'Duplicate Window Days';
+            InitValue = 60;
+            MinValue = 0;
+            MaxValue = 3650;
+            ToolTip = 'Specifies how many days apart two posted invoices from the same vendor, with the same amount and a matching vendor invoice number, may be posted and still be flagged as a possible duplicate. Users can change it in the dialog. 0 turns the check off.';
+        }
+        field(34; "Bank Change Window Days"; Integer)
+        {
+            Caption = 'Bank Change Window Days';
+            InitValue = 30;
+            MinValue = 0;
+            MaxValue = 3650;
+            ToolTip = 'Specifies how many days back, counted from today, a change to one of the vendor''s bank accounts flags a payment. Users can change it in the dialog. 0 turns the check off.';
+        }
+        field(35; "Unusual Amount %"; Decimal)
+        {
+            Caption = 'Unusual Amount %';
+            InitValue = 100;
+            DecimalPlaces = 0 : 2;
+            MinValue = 0;
+            ToolTip = 'Specifies how far, in percent, a payment must be above the median of the vendor''s payments in the last 12 months to be flagged. 100 flags payments of more than twice the median. Vendors with fewer than 3 payments in that time are not checked. 0 turns the check off.';
         }
     }
 

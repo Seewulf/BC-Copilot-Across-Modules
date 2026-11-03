@@ -2,7 +2,7 @@
   "id": "cbb181cb-34c6-4131-b2d9-9e73365b341b",
   "name": "Explain and Resolve Tests",
   "publisher": "Prabin Bhusal",
-  "version": "1.0.0.0",
+  "version": "1.1.0.0",
   "brief": "Automated tests for Explain and Resolve.",
   "description": "Tests for Explain and Resolve. The AI provider is replaced by a mock, so the tests are free, give the same result every run and need only Library Assert, so they run on a normal online sandbox.",
   "dependencies": [
@@ -10,7 +10,7 @@
       "id": "fd0480a3-8f77-4e94-8c93-afbff2a5c456",
       "name": "Explain and Resolve",
       "publisher": "Prabin Bhusal",
-      "version": "1.0.0.0"
+      "version": "1.1.0.0"
     },
     {
       "id": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",

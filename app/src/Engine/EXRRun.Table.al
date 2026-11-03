@@ -1,6 +1,7 @@
 namespace PrabinBhusal.ExplainResolve;
 
 using Microsoft.CRM.Team;
+using Microsoft.Finance.GeneralLedger.Journal;
 using Microsoft.Sales.Customer;
 
 // One row per Generate call: what was asked, what came back and what the user did with it.
@@ -159,6 +160,33 @@ table 58201 "EXR Run"
             MaxValue = 25;
             ToolTip = 'Specifies how many of the highest-ranked customers are reviewed.';
         }
+        // options of Check payment run, which reviews the lines of one payment journal batch
+        field(40; "Journal Template Name"; Code[10])
+        {
+            Caption = 'Journal Template Name';
+            TableRelation = "Gen. Journal Template";
+            ToolTip = 'Specifies the journal template of the payment journal that was checked.';
+        }
+        field(41; "Journal Batch Name"; Code[10])
+        {
+            Caption = 'Journal Batch Name';
+            TableRelation = "Gen. Journal Batch".Name where("Journal Template Name" = field("Journal Template Name"));
+            ToolTip = 'Specifies the payment journal batch that was checked.';
+        }
+        field(42; "Duplicate Window Days"; Integer)
+        {
+            Caption = 'Duplicate Window (Days)';
+            MinValue = 0;
+            MaxValue = 3650;
+            ToolTip = 'Specifies how many days apart two invoices with the same amount and a matching vendor invoice number may be posted and still be flagged as a possible duplicate. 0 turns the check off.';
+        }
+        field(43; "Bank Change Window Days"; Integer)
+        {
+            Caption = 'Bank-Change Window (Days)';
+            MinValue = 0;
+            MaxValue = 3650;
+            ToolTip = 'Specifies how many days back, counted from today, a change to one of the vendor''s bank accounts flags a payment. 0 turns the check off.';
+        }
         field(30; "No. of Findings"; Integer)
         {
             Caption = 'No. of Findings';
@@ -175,6 +203,8 @@ table 58201 "EXR Run"
         key(UserDay; "User ID", "Created At") { }
         key(Day; "Created At") { }
         key(Source; "Source System Id", Status) { }
+        // the Payment Journal's FactBox: the latest kept check of one batch
+        key(Journal; "Journal Template Name", "Journal Batch Name", Capability, Status) { }
     }
 
     trigger OnInsert()

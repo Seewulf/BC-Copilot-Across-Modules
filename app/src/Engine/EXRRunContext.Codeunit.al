@@ -16,7 +16,9 @@ codeunit 58203 "EXR Run Context"
         DateTokens: List of [Text];
         ContextNames: List of [Text];
         ContextValues: List of [Text];
+        ContextOwners: List of [Text];
         CurrencyCodes: List of [Text];
+        FindingReferences: Dictionary of [Text, Text];
         LcyCode: Code[10];
         LcyLoaded: Boolean;
         EmailReferenceText: Text;
@@ -40,7 +42,9 @@ codeunit 58203 "EXR Run Context"
         Clear(DateTokens);
         Clear(ContextNames);
         Clear(ContextValues);
+        Clear(ContextOwners);
         Clear(CurrencyCodes);
+        Clear(FindingReferences);
         EmailReferenceText := '';
         LcyLoaded := false;
         LoadLcy();
@@ -107,8 +111,33 @@ codeunit 58203 "EXR Run Context"
     // Text from records or from the user: always sent wrapped.
     procedure AddContext(Name: Text; UntrustedValue: Text)
     begin
+        AddFindingContext('', Name, UntrustedValue);
+    end;
+
+    // Text about one finding, such as the vendor invoice numbers of a possible duplicate. Sent wrapped, with that finding.
+    procedure AddFindingContext(Owner: Text; Name: Text; UntrustedValue: Text)
+    begin
+        ContextOwners.Add(Owner);
         ContextNames.Add(Name);
         ContextValues.Add(WrapUntrusted(UntrustedValue));
+    end;
+
+    // What the user reads where the model wrote a finding key. The first reference wins: a capability can give a short one
+    // while it finds the differences, and the engine adds the subject for every other finding.
+    procedure AddFindingReference(FindingKey: Text; Reference: Text)
+    begin
+        if not FindingReferences.ContainsKey(FindingKey) then
+            FindingReferences.Add(FindingKey, Reference);
+    end;
+
+    procedure FindingKeys(): List of [Text]
+    begin
+        exit(FindingReferences.Keys());
+    end;
+
+    procedure FindingReference(FindingKey: Text): Text
+    begin
+        exit(FindingReferences.Get(FindingKey));
     end;
 
     // A reference that the email subject must contain, such as the vendor invoice number. AL adds it when the model leaves it out.
@@ -189,12 +218,19 @@ codeunit 58203 "EXR Run Context"
         exit(StrSubstNo(PluralText, Number));
     end;
 
-    procedure ContextJson() Context: JsonObject
+    procedure ContextJson(): JsonObject
+    begin
+        exit(FindingContextJson(''));
+    end;
+
+    // Empty owner: the context of the whole run.
+    procedure FindingContextJson(Owner: Text) Context: JsonObject
     var
         Index: Integer;
     begin
         for Index := 1 to ContextNames.Count() do
-            Context.Add(ContextNames.Get(Index), ContextValues.Get(Index));
+            if ContextOwners.Get(Index) = Owner then
+                Context.Add(ContextNames.Get(Index), ContextValues.Get(Index));
     end;
 
     // {"{F3}": {"caption": "invoiced quantity", "value": "10"}, ...} for one owner.

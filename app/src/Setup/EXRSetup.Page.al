@@ -70,6 +70,16 @@ page 58200 "EXR Setup"
                 field("Hold Code"; Rec."Hold Code") { }
                 field("Default Email Tone"; Rec."Default Email Tone") { }
             }
+            group(PaymentRun)
+            {
+                Caption = 'Check payment run';
+                AboutTitle = 'Screen the payment run';
+                AboutText = 'Check payment run flags possible duplicate invoices, changed bank accounts, unusual amounts and first payments. Only the date a bank account changed is used, never its details. When you keep a Hold, the line leaves the payment journal and its invoices go on hold with the hold code. Nothing is posted.';
+
+                field("Duplicate Window Days"; Rec."Duplicate Window Days") { }
+                field("Bank Change Window Days"; Rec."Bank Change Window Days") { }
+                field("Unusual Amount %"; Rec."Unusual Amount %") { }
+            }
         }
     }
 

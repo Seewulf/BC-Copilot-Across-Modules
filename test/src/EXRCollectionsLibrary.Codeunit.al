@@ -387,7 +387,31 @@ codeunit 58283 "EXR Collections Library"
         CustLedgerEntry.FindFirst();
     end;
 
+    // A vendor invoice (negative amount) or payment (positive), posted the same way, for the payment run scenarios.
+    procedure PostVendorLine(DocumentType: Enum "Gen. Journal Document Type"; DocumentNo: Code[20]; ExternalDocumentNo: Code[35]; VendorNo: Code[20]; PostingDate: Date; Amount: Decimal; AppliesToInvoiceNo: Code[20])
+    var
+        GenJournalLine: Record "Gen. Journal Line";
+        GenJnlPostLine: Codeunit "Gen. Jnl.-Post Line";
+    begin
+        InitAccountLine(GenJournalLine, DocumentType, DocumentNo, Enum::"Gen. Journal Account Type"::Vendor, VendorNo, PostingDate, Amount);
+        GenJournalLine."External Document No." := ExternalDocumentNo;
+        // CRONUS makes the vendor document number mandatory, so credit memos and payments carry their own number
+        if ExternalDocumentNo = '' then
+            GenJournalLine."External Document No." := DocumentNo;
+        GenJournalLine.Description := ExternalDocumentNo;
+        if AppliesToInvoiceNo <> '' then begin
+            GenJournalLine."Applies-to Doc. Type" := GenJournalLine."Applies-to Doc. Type"::Invoice;
+            GenJournalLine."Applies-to Doc. No." := AppliesToInvoiceNo;
+        end;
+        GenJnlPostLine.RunWithCheck(GenJournalLine);
+    end;
+
     local procedure InitJournalLine(var GenJournalLine: Record "Gen. Journal Line"; DocumentType: Enum "Gen. Journal Document Type"; DocumentNo: Code[20]; CustomerNo: Code[20]; PostingDate: Date; Amount: Decimal)
+    begin
+        InitAccountLine(GenJournalLine, DocumentType, DocumentNo, Enum::"Gen. Journal Account Type"::Customer, CustomerNo, PostingDate, Amount);
+    end;
+
+    local procedure InitAccountLine(var GenJournalLine: Record "Gen. Journal Line"; DocumentType: Enum "Gen. Journal Document Type"; DocumentNo: Code[20]; AccountType: Enum "Gen. Journal Account Type"; AccountNo: Code[20]; PostingDate: Date; Amount: Decimal)
     begin
         LoadTemplates();
         GenJournalLine.Init();
@@ -397,8 +421,8 @@ codeunit 58283 "EXR Collections Library"
         GenJournalLine.Validate("Posting Date", PostingDate);
         GenJournalLine.Validate("Document Type", DocumentType);
         GenJournalLine."Document No." := DocumentNo;
-        GenJournalLine.Validate("Account Type", GenJournalLine."Account Type"::Customer);
-        GenJournalLine.Validate("Account No.", CustomerNo);
+        GenJournalLine.Validate("Account Type", AccountType);
+        GenJournalLine.Validate("Account No.", AccountNo);
         GenJournalLine.Validate("Bal. Account Type", GenJournalLine."Bal. Account Type"::"G/L Account");
         GenJournalLine.Validate("Bal. Account No.", BalanceAccountNo);
         GenJournalLine.Validate(Amount, Amount);

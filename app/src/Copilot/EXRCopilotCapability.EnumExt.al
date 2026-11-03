@@ -13,4 +13,8 @@ enumextension 58200 "EXR Copilot Capability" extends "Copilot Capability"
     {
         Caption = 'Plan collections';
     }
+    value(58202; "EXR Payment Run")
+    {
+        Caption = 'Check payment run';
+    }
 }

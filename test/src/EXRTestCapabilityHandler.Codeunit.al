@@ -31,6 +31,16 @@ codeunit 58279 "EXR Test Capability Handler" implements "EXR Capability Handler"
         exit(false);
     end;
 
+    procedure DraftsEmail(): Boolean
+    begin
+        exit(true);
+    end;
+
+    procedure UsesPaymentWindows(): Boolean
+    begin
+        exit(false);
+    end;
+
     procedure BuildFacts(var ExrRun: Record "EXR Run"; var TempFinding: Record "EXR Finding" temporary; var RunContext: Codeunit "EXR Run Context")
     begin
     end;

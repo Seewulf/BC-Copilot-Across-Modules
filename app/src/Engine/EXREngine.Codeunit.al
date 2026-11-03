@@ -16,13 +16,22 @@ codeunit 58202 "EXR Engine"
         PromptVersionTok: Label '%1#%2', Locked = true;
         TableTok: Label '{TABLE}', Locked = true;
         FactTokenPatternTok: Label '\{F\d+\}', Locked = true;
+        // a whole finding key in any letter case, so LINE-1 never matches inside LINE-10
+        KeyPatternTok: Label '(?i)(?<![A-Z0-9_])%1(?![A-Z0-9_])', Locked = true;
+        SentenceStartKeyTok: Label '(?i)(?<=^\s*|[.!?]\s+|\n\s*)%1(?![A-Z0-9_])', Locked = true;
+        // stands in for a token or key in the flag checks: no pattern matches it, and an address glued to it still reads as one
+        PlaceholderTok: Label '_', Locked = true;
         // a currency symbol, two decimals, a thousands separator or a percentage: a figure the model wrote itself
         FigurePatternTok: Label '[£$€¥]\s?\d|\d[.,]\d{2}(?!\d)|\d{1,3}(,\d{3})+|\d\s?%', Locked = true;
-        // in an email: an email address, an IBAN or an account number the model wrote itself, the shape of a payment redirection
-        EmailRiskPatternTok: Label '[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z0-9.-]+|(?<![A-Za-z0-9])[A-Z]{2}\d{2}(\s?[A-Z0-9]{4}){2,}|\d{6,}', Locked = true;
+        // in any text: an email address, an IBAN or a phone number (9 or more characters) the model wrote itself, the shape of a payment redirection
+        ContactPatternTok: Label '[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z0-9.-]+|(?<![A-Za-z0-9])[A-Z]{2}\d{2}(\s?[A-Z0-9]{4}){2,}|\+?\d[\d\s().-]{7,}\d', Locked = true;
+        // in an email also a run of six or more digits, such as an account number
+        AccountNoPatternTok: Label '\d{6,}', Locked = true;
         ReplySchemaTok: Label '{"type":"object","additionalProperties":false,"required":["summary","findings","emailSubject","emailBody"],"properties":{"summary":{"type":"string"},"findings":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["key","explanation","action","confidence"],"properties":{"key":{"type":"string","enum":%1},"explanation":{"type":"string"},"action":{"type":"string","enum":%2},"confidence":{"type":"string","enum":["High","Medium","Low"]}}}},"emailSubject":{"type":"string"},"emailBody":{"type":"string"}}}', Locked = true;
         // one email per finding, for example a reminder per customer; empty strings when the action needs no email
         ReplySchemaPerFindingTok: Label '{"type":"object","additionalProperties":false,"required":["summary","findings"],"properties":{"summary":{"type":"string"},"findings":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["key","explanation","action","confidence","emailSubject","emailBody"],"properties":{"key":{"type":"string","enum":%1},"explanation":{"type":"string"},"action":{"type":"string","enum":%2},"confidence":{"type":"string","enum":["High","Medium","Low"]},"emailSubject":{"type":"string"},"emailBody":{"type":"string"}}}}}}', Locked = true;
+        // no email at all, for example a payment run: the summary is the note for the approver
+        ReplySchemaNoEmailTok: Label '{"type":"object","additionalProperties":false,"required":["summary","findings"],"properties":{"summary":{"type":"string"},"findings":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["key","explanation","action","confidence"],"properties":{"key":{"type":"string","enum":%1},"explanation":{"type":"string"},"action":{"type":"string","enum":%2},"confidence":{"type":"string","enum":["High","Medium","Low"]}}}}}}', Locked = true;
         FeatureNameTok: Label 'Explain and Resolve', Locked = true;
         GeneratedEventIdTok: Label 'EXR0001', Locked = true;
         FailedEventIdTok: Label 'EXR0002', Locked = true;
@@ -147,12 +156,13 @@ codeunit 58202 "EXR Engine"
         // the emails list the accepted findings only
         if Handler.DraftsEmailPerFinding() then
             InsertFindingEmailTables(Handler, TempFinding)
-        else begin
-            // saved first because the draft reads the body from the table
-            ExrRun."Email Subject" := CopyStr(EmailSubject, 1, MaxStrLen(ExrRun."Email Subject"));
-            ExrRun.SetEmailBody(InsertEmailTable(EmailBody, Handler.BuildEmailTable(TempFinding)));
-            ExrRun.Modify();
-        end;
+        else
+            if Handler.DraftsEmail() then begin
+                // saved first because the draft reads the body from the table
+                ExrRun."Email Subject" := CopyStr(EmailSubject, 1, MaxStrLen(ExrRun."Email Subject"));
+                ExrRun.SetEmailBody(InsertEmailTable(EmailBody, Handler.BuildEmailTable(TempFinding)));
+                ExrRun.Modify();
+            end;
         // the handler gets the accepted findings only and may fill in their recipients and draft flags
         KeptMessage := Handler.ApplyKeep(ExrRun, TempFinding);
         TempFinding.SetRange(Accepted, true);
@@ -208,7 +218,8 @@ codeunit 58202 "EXR Engine"
                 Findings.Add(FindingJson(Handler, TempFinding, RunContext));
             until TempFinding.Next() = 0;
         Pack.Add('findings', Findings);
-        Pack.Add('emailTone', Format(ExrRun."Email Tone"));
+        if Handler.DraftsEmail() then
+            Pack.Add('emailTone', Format(ExrRun."Email Tone"));
         if ExrRun."User Note" <> '' then
             Pack.Add('userNote', RunContext.WrapUntrusted(ExrRun."User Note"));
         Pack.WriteTo(UserMessage);
@@ -237,6 +248,8 @@ codeunit 58202 "EXR Engine"
                 ActionNames.Add(ActionName(FindingAction));
         end;
         ActionNames.WriteTo(ActionsText);
+        if not Handler.DraftsEmail() then
+            exit(StrSubstNo(ReplySchemaNoEmailTok, KeysText, ActionsText));
         if Handler.DraftsEmailPerFinding() then
             exit(StrSubstNo(ReplySchemaPerFindingTok, KeysText, ActionsText));
         exit(StrSubstNo(ReplySchemaTok, KeysText, ActionsText));
@@ -267,6 +280,7 @@ codeunit 58202 "EXR Engine"
         Body: Text;
         Flagged: Boolean;
     begin
+        AddFindingReferences(TempFinding, RunContext);
         ExrRun.Summary := CopyStr(Render(TextValue(Reply, 'summary'), RunContext, Flagged), 1, MaxStrLen(ExrRun.Summary));
         ExrRun."Unverified Figures" := Flagged;
         if Reply.Get('findings', Findings) then
@@ -275,7 +289,8 @@ codeunit 58202 "EXR Engine"
                     if Item.IsObject() then
                         if ApplyFindingReply(Handler, Item.AsObject(), TempFinding, RunContext) then
                             ExrRun."Unverified Figures" := true;
-        if not Handler.DraftsEmailPerFinding() then begin
+        if Handler.DraftsEmail() and not Handler.DraftsEmailPerFinding() then begin
+            // one email for the whole run goes to the one party all its findings are about, so every subject may appear
             ExrRun."Email Subject" := CopyStr(EmailDraft.SubjectWithReference(RenderEmail(TextValue(Reply, 'emailSubject'), '', RunContext, Flagged), RunContext.EmailReference(), MaxStrLen(ExrRun."Email Subject")), 1, MaxStrLen(ExrRun."Email Subject"));
             ExrRun."Unverified Figures" := ExrRun."Unverified Figures" or Flagged;
             // {TABLE} stays in the body: Keep it fills it from the findings the user accepted
@@ -299,14 +314,15 @@ codeunit 58202 "EXR Engine"
         exit(PreviewBody.Replace(TablePreviewLbl, TableTok));
     end;
 
-    // Replaces known {Fn} tokens with their values and drops unknown ones. Flags figures written outside tokens.
+    // Replaces known {Fn} tokens with their values and finding keys with their references, and drops unknown tokens.
+    // Flags figures, addresses, IBANs and phone numbers written outside tokens and keys.
     procedure Render(Input: Text; var RunContext: Codeunit "EXR Run Context"; var Flagged: Boolean): Text
     begin
         exit(RenderText(Input, false, '', RunContext, Flagged));
     end;
 
     // Email text goes to an outside party. A finding's own email (Owner set) may cite only that finding's dates: any other
-    // token is dropped and flagged. Every email is also flagged for an address, an IBAN or an account number in the text.
+    // token is dropped and flagged. Every email is also flagged for an account number in the text.
     procedure RenderEmail(Input: Text; Owner: Text; var RunContext: Codeunit "EXR Run Context"; var Flagged: Boolean): Text
     begin
         exit(RenderText(Input, true, Owner, RunContext, Flagged));
@@ -319,6 +335,8 @@ codeunit 58202 "EXR Engine"
         Token: Text;
         Value: Text;
         WithoutTokens: Text;
+        FindingKey: Text;
+        KeyPattern: Text;
         CurrencyPattern: Text;
         OwnDatesOnly: Boolean;
         Found: Boolean;
@@ -331,7 +349,7 @@ codeunit 58202 "EXR Engine"
         if TempMatches.FindSet() then
             repeat
                 Token := TempMatches.ReadValue();
-                WithoutTokens := WithoutTokens.Replace(Token, '');
+                WithoutTokens := WithoutTokens.Replace(Token, PlaceholderTok);
                 if OwnDatesOnly then
                     Found := RunContext.TryGetDateFactOf(Token, Owner, Value)
                 else
@@ -342,9 +360,29 @@ codeunit 58202 "EXR Engine"
                 end;
                 Output := Output.Replace(Token, Value);
             until TempMatches.Next() = 0;
+        // a finding key works like a token: the user sees the finding's reference, whose numbers are never flagged.
+        // A finding's own email may name only that finding, so another finding's key there is dropped and flagged.
+        foreach FindingKey in RunContext.FindingKeys() do begin
+            KeyPattern := StrSubstNo(KeyPatternTok, Regex.Escape(FindingKey));
+            if Regex.IsMatch(Output, KeyPattern) then begin
+                WithoutTokens := Regex.Replace(WithoutTokens, KeyPattern, PlaceholderTok);
+                Value := '';
+                if OwnDatesOnly and (FindingKey <> Owner) then
+                    Dropped := true
+                else begin
+                    // $ is special in a regex replacement
+                    Value := RunContext.FindingReference(FindingKey).Replace('$', '$$');
+                    // a reference that starts a sentence gets a capital: payment EXR-1 reads as Payment EXR-1
+                    Output := Regex.Replace(Output, StrSubstNo(SentenceStartKeyTok, Regex.Escape(FindingKey)), UpperCase(CopyStr(Value, 1, 1)) + CopyStr(Value, 2));
+                end;
+                Output := Regex.Replace(Output, KeyPattern, Value);
+            end;
+        end;
         Flagged := Dropped or Regex.IsMatch(WithoutTokens, FigurePatternTok);
+        if not Flagged then
+            Flagged := Regex.IsMatch(WithoutTokens, ContactPatternTok);
         if not Flagged and IsEmail then
-            Flagged := Regex.IsMatch(WithoutTokens, EmailRiskPatternTok);
+            Flagged := Regex.IsMatch(WithoutTokens, AccountNoPatternTok);
         // an amount written with the run's currency code, such as GBP 150
         CurrencyPattern := RunContext.CurrencyFigurePattern();
         if not Flagged and (CurrencyPattern <> '') then
@@ -510,12 +548,29 @@ codeunit 58202 "EXR Engine"
         TempFinding.Reset();
     end;
 
+    // The user never sees finding keys, so Render shows a key the model writes as the finding's subject,
+    // unless the capability already gave a shorter reference.
+    local procedure AddFindingReferences(var TempFinding: Record "EXR Finding" temporary; var RunContext: Codeunit "EXR Run Context")
+    begin
+        TempFinding.Reset();
+        if TempFinding.FindSet() then
+            repeat
+                RunContext.AddFindingReference(TempFinding."Finding Key", TempFinding.Subject);
+            until TempFinding.Next() = 0;
+    end;
+
     local procedure FindingJson(Handler: Interface "EXR Capability Handler"; var TempFinding: Record "EXR Finding" temporary; var RunContext: Codeunit "EXR Run Context") Finding: JsonObject
+    var
+        Context: JsonObject;
     begin
         Finding.Add('key', TempFinding."Finding Key");
         Finding.Add('type', TempFinding."Finding Type");
         Finding.Add('severity', Format(TempFinding.Severity));
         Finding.Add('subject', RunContext.WrapUntrusted(TempFinding.Subject));
+        // only findings that have their own text, so the requests of the other capabilities stay as they were
+        Context := RunContext.FindingContextJson(TempFinding."Finding Key");
+        if Context.Keys().Count() > 0 then
+            Finding.Add('context', Context);
         Finding.Add('suggestedAction', ActionName(TempFinding."Action"));
         Finding.Add('allowedActions', AllowedActions(Handler, TempFinding."Finding Type"));
         Finding.Add('facts', RunContext.FactsJson(TempFinding."Finding Key"));
