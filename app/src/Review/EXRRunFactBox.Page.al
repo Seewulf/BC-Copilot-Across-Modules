@@ -22,9 +22,11 @@ page 58205 "EXR Run FactBox"
                 end;
             }
             field("User ID"; Rec."User ID") { }
+            // no caption: in a narrow FactBox the caption is squeezed into the text box
             field(Summary; Rec.Summary)
             {
                 MultiLine = true;
+                ShowCaption = false;
             }
             field("No. of Findings"; Rec."No. of Findings") { }
             field("Email Draft Saved"; Rec."Email Draft Saved") { }

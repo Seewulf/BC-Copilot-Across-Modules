@@ -29,9 +29,11 @@ page 58207 "EXR Finding FactBox"
                 end;
             }
             field(Rank; Rec.Rank) { }
+            // no caption: in a narrow FactBox the caption is squeezed into the text box
             field(Description; Rec.Description)
             {
                 MultiLine = true;
+                ShowCaption = false;
             }
             field(FindingAction; Rec."Action") { }
             field("Amount (LCY)"; Rec."Amount (LCY)") { }
