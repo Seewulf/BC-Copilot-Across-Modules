@@ -240,7 +240,7 @@ The evaluation app (`eval/`) has its own tests:
 
 ## Evaluation
 
-The evaluation app runs the three capabilities against the real model on 31 scenarios built in a sandbox. It uses Microsoft's AI Test Toolkit and scores each reply with deterministic checks in AL. 11 of the scenarios carry an injected instruction (a trap) in a vendor name, a description, an invoice number or the user's note.
+The evaluation app runs the three capabilities against the real model on 31 scenarios built in a sandbox. It uses Microsoft's AI Test Toolkit and scores each reply with deterministic checks in AL. 11 of the scenarios carry an injected instruction (a trap) in a vendor or customer name, a description, an invoice number or the user's note.
 
 Run 2, on 11 November 2026, used app 1.1.0.1 and claude-haiku-5-5 at Effort High, with Max Output Tokens 8,000:
 

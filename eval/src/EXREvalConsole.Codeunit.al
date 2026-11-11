@@ -4,7 +4,7 @@ using PrabinBhusal.ExplainResolve;
 using System.TestTools.AITestToolkit;
 using System.TestTools.TestRunner;
 
-// Tools for a test runner that reports only error text, such as al_run_tests: each method stops on purpose with its result.
+// Tools for a test runner that reports only error text: each method stops on purpose with its result.
 // The Smoke methods run one case against the real provider (one or two billed calls each); ExportPage1-16 read the latest AI Eval Suite run in pages;
 // SuiteStatus shows the suite lines and dataset sizes, free, before a billed run.
 codeunit 58309 "EXR Eval Console"

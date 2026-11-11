@@ -27,7 +27,7 @@ The evaluation starts this run in `eval/src/EXREvalRunner.Codeunit.al` (`RunCase
 | Instructions | `app/prompts/shared-rules.md`, `app/prompts/payment-run.md` |
 | Findings list in the dialog | `app/src/Review/EXRFindingsPart.Page.al` |
 
-The engine never branches on the capability. `EXR Capability` is an enum that implements `EXR Capability Handler` (`EXRCapability.Enum.al`, lines 4-22), so `Handler := ExrRun.Capability` (`EXREngine.Codeunit.al`, line 75) picks the codeunit. Adding a capability means a new handler, prompt file, enum value and page action; the engine, dialog and checks are shared. The cost is that every capability has to fit one shape: findings with a key, a type, a severity, a default action and an allow-list. Anything that does not fit, such as a conversation, needs a different design.
+The engine never branches on the capability. `EXR Capability` is an enum that implements `EXR Capability Handler` (`EXRCapability.Enum.al`, lines 4-22), so `Handler := ExrRun.Capability` (`EXREngine.Codeunit.al`, line 75) picks the codeunit. Adding a capability means a new handler, prompt file, enum value, `Copilot Capability` value (registered in `EXRInstall.Codeunit.al`) and page action; the engine, dialog and checks are shared. The cost is that every capability has to fit one shape: findings with a key, a type, a severity, a default action and an allow-list. Anything that does not fit, such as a conversation, needs a different design.
 
 ## 1. The page action opens the dialog
 
@@ -199,7 +199,7 @@ Had the action been Hold, as for the copy INV4471 in the demo batch, `HoldPaymen
 2. Check that it is still in the same batch, for the same vendor and amount, paying the same number of entries with the same checksum (lines 753-762). If not, raise an error: nothing is kept.
 3. Refuse a line already exported to a payment file or with a printed check (lines 764-765).
 4. Delete the line with its own trigger, which clears its application on the entries (line 767).
-5. Set On Hold through the standard `Vend. Entry-Edit` codeunit (line 781). Which entries depends on the signal: every invoice of the line for BANK, AMOUNT or FIRST, otherwise only the duplicate. A credit memo is never put on hold, and an existing hold code is kept (lines 771-789).
+5. Set On Hold through the standard `Vend. Entry-Edit` codeunit (line 781). Which entries depends on the signal: every invoice of the line for BANK, AMOUNT or FIRST; for a duplicate signal, only the line's own flagged invoice, not the other invoice it matched (the later copy when the line pays both); nothing new for PAID or ON_HOLD alone. A credit memo is never put on hold, and an existing hold code is kept (lines 771-789).
 
 All of this runs in the one transaction of the page close. One failed line rolls back every line and the findings. The codeunit carries delete permission on Gen. Journal Line (line 15), and the user permission set gives the indirect rights that `Vend. Entry-Edit` and the change log need. So a user with only D365 READ plus Explain and Resolve - User can keep a Hold, and can make these writes only through these objects.
 
