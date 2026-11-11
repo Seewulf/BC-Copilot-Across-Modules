@@ -1149,12 +1149,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType DaysLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 153584199" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Only the digits of the vendor invoice numbers match</source>
+          <source>Only the digits of the vendor invoice numbers match.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType DigitsMatchLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 1124302009" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The possible duplicate is already closed, so it was paid or settled</source>
+          <source>The possible duplicate is already closed, so it was paid or settled.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType DuplicateClosedLbl</note>
         </trans-unit>
@@ -1164,22 +1164,22 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType DuplicateDetailLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 1736606419" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The possible duplicate is still open</source>
+          <source>The possible duplicate is still open.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType DuplicateOpenLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 2455463667" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This invoice was entered before the possible duplicate</source>
+          <source>This invoice was entered before the possible duplicate.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType EnteredFirstLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 1761105807" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This invoice was entered after the possible duplicate</source>
+          <source>This invoice was entered after the possible duplicate.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType EnteredLaterLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 2396555974" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The vendor invoice numbers are the same once spaces and symbols are removed</source>
+          <source>The vendor invoice numbers are the same once spaces and symbols are removed.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType ExactMatchLbl</note>
         </trans-unit>
@@ -1204,7 +1204,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType IssuedDetailLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 1992212793" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The line was already exported to a payment file or its check was printed, so it can no longer be held here</source>
+          <source>The line was already exported to a payment file or its check was printed, so it can no longer be held here.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType IssuedLbl</note>
         </trans-unit>
@@ -1244,17 +1244,17 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType NoHoldCodeErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 708238316" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The payment line names no bank account</source>
+          <source>The payment line names no bank account.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType NoRecipientLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 1267117781" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Nothing that this line pays is still open, so it was already paid or settled</source>
+          <source>Nothing that this line pays is still open, so it was already paid or settled.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType NothingOpenLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 3088295835" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The possible duplicate is not paid in this payment run</source>
+          <source>The possible duplicate is not paid in this payment run.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType NotInRunLbl</note>
         </trans-unit>
@@ -1294,7 +1294,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OnHoldDetailLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 2788788436" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Another line of this payment run pays the possible duplicate</source>
+          <source>Another line of this payment run pays the possible duplicate.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OtherLineLbl</note>
         </trans-unit>
@@ -1304,7 +1304,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OverpaidDetailLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 437986993" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The line pays more than is still open on the entries it pays</source>
+          <source>The line pays more than is still open on the entries it pays.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType OverpaysLbl</note>
         </trans-unit>
@@ -1319,17 +1319,17 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType PaymentsLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 188078668" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This payment line pays both invoices</source>
+          <source>This payment line pays both invoices.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType PaysBothLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 3530039237" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This payment goes to a bank account that changed</source>
+          <source>This payment goes to a bank account that changed.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType PaysChangedLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1655506584 - NamedType 2560819039" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This payment goes to a bank account that did not change</source>
+          <source>This payment goes to a bank account that did not change.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType PaysOtherLbl</note>
         </trans-unit>
@@ -1364,12 +1364,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Payment Run - NamedType TodayLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3712040532 - NamedType 3560342024" size-unit="char" translate="yes" xml:space="preserve">
-          <source>All %1 lines checked have differences</source>
+          <source>All %1 lines checked have differences.</source>
           <note from="Developer" annotates="general" priority="2">%1 = number of lines checked</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType AllLinesDifferLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3712040532 - NamedType 2133588694" size-unit="char" translate="yes" xml:space="preserve">
-          <source>All %1 lines checked have no differences</source>
+          <source>All %1 lines checked have no differences.</source>
           <note from="Developer" annotates="general" priority="2">%1 = number of lines checked</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType AllLinesOkLbl</note>
         </trans-unit>
@@ -1424,7 +1424,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType LineSubjectLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3712040532 - NamedType 2293566699" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The invoice has no lines to check</source>
+          <source>The invoice has no lines to check.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType NoLinesCheckedLbl</note>
         </trans-unit>
@@ -1444,7 +1444,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType NotReceivedLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3712040532 - NamedType 1673610016" size-unit="char" translate="yes" xml:space="preserve">
-          <source>1 of the %1 lines checked has no differences</source>
+          <source>1 of the %1 lines checked has no differences.</source>
           <note from="Developer" annotates="general" priority="2">%1 = number of lines checked</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType OneLineOkLbl</note>
         </trans-unit>
@@ -1454,12 +1454,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType OnePostedLineLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3712040532 - NamedType 1719134051" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The only line checked has differences</source>
+          <source>The only line checked has differences.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType OnlyLineDiffersLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3712040532 - NamedType 1831786800" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The only line checked has no differences</source>
+          <source>The only line checked has no differences.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType OnlyLineOkLbl</note>
         </trans-unit>
@@ -1484,7 +1484,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType PriceVsOrderLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3712040532 - NamedType 1943283505" size-unit="char" translate="yes" xml:space="preserve">
-          <source>%1 of the %2 lines checked have no differences</source>
+          <source>%1 of the %2 lines checked have no differences.</source>
           <note from="Developer" annotates="general" priority="2">%1 = number of lines without differences, %2 = number of lines checked</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXR Purch. Variance - NamedType SomeLinesOkLbl</note>
         </trans-unit>

@@ -155,7 +155,7 @@ codeunit 58276 "EXR Purch. Variance Tests"
         TempFinding.Reset();
         Assert.AreEqual(6, TempFinding.Count(), 'findings in the demo');
         // [THEN] the summary fact is a grammatical sentence built by AL, with "has" for one line
-        Assert.AreEqual('1 of the 4 lines checked has no differences',
+        Assert.AreEqual('1 of the 4 lines checked has no differences.',
             ScenarioLibrary.FactValue('', 'lines checked and how many have no differences, as a full sentence'), 'lines sentence');
     end;
 

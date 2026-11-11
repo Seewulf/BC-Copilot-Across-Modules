@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+    <AITSuite Code="EXR-EVAL" Description="Explain and Resolve against the real AI provider" Dataset="EXR-EVAL-PV" TestRunnerId="130450" TestType="Copilot">
+        <Line CodeunitID="58300" Description="Explain invoice variance" Dataset="EXR-EVAL-PV" />
+        <Line CodeunitID="58300" Description="Plan collections" Dataset="EXR-EVAL-COL" />
+        <Line CodeunitID="58300" Description="Check payment run" Dataset="EXR-EVAL-PR" />
+    </AITSuite>
+</Root>

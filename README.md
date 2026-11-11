@@ -193,6 +193,8 @@ Recipients always come from Business Central, and each action comes from that fi
 
 The test app (`test/`) adds three actions to the Explain and Resolve Setup page. Use them only in a sandbox: they create and post real documents, and Microsoft does not allow running tests in production environments. The test app depends on Microsoft's Library Assert app. When the test app is installed, the Provider field also lists **Mock (tests only)**: keep it set to **Claude API** for a live demo.
 
+The evaluation app (`eval/`) can also read the main app's internals and calls your AI provider with billed requests: install it only in a sandbox. Results: [docs/evaluation-results.md](docs/evaluation-results.md).
+
 | Action | What it creates | What to do next |
 |---|---|---|
 | **Create demo invoice scenario** | A vendor (Northwind Office Furniture Ltd.), two items, an earlier posted invoice for the price history, a purchase order with 8 of 10 tables received, a posted invoice INV4472, and an open purchase invoice INV-4472 for 10 tables at a 6% higher price, desks at the order price, an unordered freight line and an unassigned item charge. Posting must be allowed on the work date. | The invoice opens. Choose **Explain variance**, then **Generate**. Expect six findings: not received, price against the order, price against history, G/L line without an order, item charge not assigned and possible duplicate. |
@@ -215,19 +217,71 @@ The cost is worked out at USD 0.10 per million input tokens and USD 0.50 per mil
 
 ## Tests
 
-The test app has 145 automated tests in 18 test codeunits. The 97 tests of version 1.0 all passed in a Business Central 29 sandbox on 2 November 2026. Version 1.1 adds 48 tests: 40 for Check payment run, 5 for its setup fields, upgrade and registration, and 3 for how the engine shows a finding the model names. All 145 tests passed on version 1.1 in the same sandbox on 3 November 2026. The AI provider is replaced by a mock client, so the tests make no calls to a real AI service, cost nothing and give the same result every run. The mock records each request, so the tests can check exactly what would be sent.
+The test app has 146 automated tests in 18 test codeunits. The 97 tests of version 1.0 all passed in a Business Central 29 sandbox on 2 November 2026. Version 1.1 adds 49 tests: 40 for Check payment run, 5 for its setup fields, upgrade and registration, 3 for how the engine shows a finding the model names, and 1 (in 1.1.0.1) for the full stop after a fact that is a whole sentence. All 146 tests passed on version 1.1.0.1 in the same sandbox on 11 November 2026. The AI provider is replaced by a mock client, so the tests make no calls to a real AI service, cost nothing and give the same result every run. The mock records each request, so the tests can check exactly what would be sent.
 
 What the tests cover:
 
 - **Claude API client:** the request body, effort and JSON schema, no sampling parameters, thinking blocks skipped, refusals and cut-off replies, and clear messages for an invalid key, rate limits, overload and used-up credits.
 - **Setup and Test Connection:** defaults, https only, setting and removing the key, a changed endpoint stopping the call, replies outside the schema, and the 1.1 upgrade: the new setup fields filled once without changing other values, the upgrade tags and the capability registration.
-- **Engine:** capability switched off, missing key, daily limits per user and company, the strict reply schema, unknown findings, tokens and actions dropped, a finding key in the model's text shown as the finding's subject, another customer's key never named in a reminder, untrusted text tagged and escaped, stray figures, currency codes, percentages, addresses, phone numbers and bank details flagged, one retry then fail closed, and no model call when nothing is found.
+- **Engine:** capability switched off, missing key, daily limits per user and company, the strict reply schema, unknown findings, tokens and actions dropped, a finding key in the model's text shown as the finding's subject, another customer's key never named in a reminder, one full stop after a fact that is a whole sentence, untrusted text tagged and escaped, stray figures, currency codes, percentages, addresses, phone numbers and bank details flagged, one retry then fail closed, and no model call when nothing is found.
 - **Explain invoice variance:** each check, including the tolerance edge, cheaper invoices, the price history from up to three posted lines, hand-keyed and split lines, variants, duplicate numbers written differently, open invoices only, Keep it putting the invoice on hold without posting, a blank or existing hold code, and the vendor invoice number in the subject.
 - **Plan collections:** age buckets, usual delay from invoices paid by a payment, promises, disputes and holds, unapplied payments, credit limit use, ranking and Max. customers, the filters, the allowed actions per situation, no email address or bank data in the request, one email per customer, the output size check, the worklist and drafts on Keep it, and the Collections review FactBox.
 - **Check payment run:** possible duplicates with the number written differently or only the digits matching, the window edges, other numbers or amounts and numbers with fewer than 3 digits, the copy held and the first invoice kept, a summarised line that pays both copies, a copy already cancelled with a credit memo, a copy already paid and the true order sent to the model, lines whose invoice was paid in full or in part after the line was made, the amount against the median at its threshold edge and with too few payments, a bank account added today and the bank check turned off, first payments, invoices already on hold (also with a bank change), lines with the vendor as balancing account counted but not checked, the demo's findings, no IBAN, account number, SWIFT code or bank name in the request, names and descriptions tagged as untrusted, no email in the schema, the allowed actions per signal, the model unable to pay a risky line or take a Hold away, phone numbers in the reply flagged, failing closed and keeping a failed run, and Keep it: only accepted Hold lines deleted, every invoice of a line with a bank change held but not its credit memo, only the copy held on a summarised line, an existing hold code kept, the held invoices listed on the kept finding, a changed, deleted or exported line and an invoice added after the check each stopping Keep it with nothing kept, a blank Hold Code refused, Keep it for a user with only D365 READ and Explain and Resolve - User, Discard writing only the run row, and the Payment run review FactBox. A bank change older than the window is not tested, because a test cannot set the time a record was changed.
 - **Keep it, Discard and Regenerate:** a second Keep it changes nothing, Discard writes only the run row, and a blocked or failed Regenerate keeps the current result.
 
 Several tests take ledger fingerprints after Generate and compare them after Keep it or Discard. For Explain invoice variance they count G/L, vendor, item and value entries to show nothing is posted, and compare the invoice lines. For Plan collections they count customer ledger entries, their details and reminders, and after Keep it also compare each customer ledger entry's amounts, dates, promises, disputes and holds, and the customer's credit limit. For Check payment run they count G/L, vendor, detailed vendor and bank account ledger entries, and compare the other journal lines (vendor, amount, application and recipient bank account) and each of the vendor's ledger entries (open, remaining amount, hold, applies-to ID and due date).
+
+The evaluation app (`eval/`) has its own tests:
+
+- **21 free tests in 2 codeunits**, which use the mock and cost nothing. Both passed on 11 November 2026.
+  - 58307 EXR Eval Scorer Tests (18 tests) shows that every check of the scorer can fail.
+  - 58308 EXR Eval Dataset Tests (3 tests) builds every dataset case, checks that Business Central finds exactly the expected findings, and checks that every trap text reaches the request.
+- **Two codeunits that are not free tests:** 58300 runs the suite cases against the real provider, with billed calls. 58309 holds the console methods: the suite status, billed smoke runs and the result export. See **Evaluation** below.
+
+## Evaluation
+
+The evaluation app runs the three capabilities against the real model on 31 scenarios built in a sandbox. It uses Microsoft's AI Test Toolkit and scores each reply with deterministic checks in AL. 11 of the scenarios carry an injected instruction (a trap) in a vendor name, a description, an invoice number or the user's note.
+
+Run 2, on 11 November 2026, used app 1.1.0.1 and claude-haiku-5-5 at Effort High, with Max Output Tokens 8,000:
+
+| Capability | Mean case score | Cases with every check passed |
+|---|---|---|
+| Explain invoice variance | 0.973 | 9 of 11 |
+| Plan collections | 0.974 | 6 of 9 |
+| Check payment run | 0.881 | 8 of 11 |
+| All | 0.941 | 23 of 31 |
+
+- **Traps:** 11 of 11 were resisted.
+- **Checks:** 253 of 261 passed.
+- **Failed closed:** one case. The three-finding demo payment run hit the 8,000 output-token limit and was cut off.
+- **Cost:** 31 model calls, about USD 0.05.
+- **The other failures:**
+  - In 3 cases the model wrote a number itself, copied from a subject or a fact caption.
+  - In 4 cases an explanation did not cite the fact behind its finding.
+  - They are published as they came, and nothing was re-run.
+- **Run 1**, the same day, scored 0.988 on looser checks. The results page says what was tightened and why.
+
+What is measured, case by case:
+
+- whether the reply could be used;
+- whether the model wrote a number or an internal key itself;
+- whether it chose an action a finance person would accept;
+- whether it cited the facts behind each finding and kept to its own finding;
+- whether its emails are clean;
+- whether it resisted the traps.
+
+What is not measured:
+
+- how much the model varies between runs, because each case ran once per run;
+- whether an explanation is right beyond the fact it cites;
+- an injected instruction that the model paraphrases instead of repeating;
+- other models, other effort levels and real company data. All scenarios are built in CRONUS UK Ltd.
+
+The acceptable actions are one finance person's judgement.
+
+- Results and failures: [docs/evaluation-results.md](docs/evaluation-results.md)
+- Method and how to run it: [eval/README.md](eval/README.md)
+- How one run goes through the code, with the weak spots: [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md)
 
 ## Planned releases
 
@@ -255,6 +309,12 @@ app/                      the extension (Business Central 29, per-tenant, IDs 58
   src/Review/             dialog, findings, runs and FactBoxes
   src/Permissions/        permission sets
 test/                     test app (IDs 58270-58299): tests, mock provider, demo actions
+eval/                     evaluation app (IDs 58300-58329): AI Test Toolkit suite, datasets, scorer; sandbox only
+  resources/              the datasets and the suite definition
+  results/                the raw results of each evaluation run
+  export-results.ps1      turns exported results into the JSON and the report
+docs/                     evaluation results and the code walkthrough
+.github/workflows/        compile check of app, test and eval with the analyzers; it runs no tests
 ```
 
 Each capability is one codeunit behind the `EXR Capability Handler` interface. The dialog, the model call and the checks described above are shared, so a new capability adds its own handler codeunit (checks, allowed actions and Keep it changes), a prompt file, a capability value with its Copilot registration, and the Copilot action on its page, plus any new actions in the `EXR Action` enum and its objects in the permission sets.

@@ -1,0 +1,76 @@
+# Compile check: builds app/, test/ and eval/ with the analyzers and EXR.ruleset.json.
+# It does not run tests: they need a Business Central sandbox.
+name: Build
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    name: Compile app, test and eval
+    runs-on: ubuntu-24.04
+    env:
+      # AL compiler from nuget.org, the same build as AL Language extension 18.1.2842859.
+      AL_TOOLS_VERSION: 18.1.43.24897
+      # Microsoft's public symbol feed (no sign-in), W1 symbols of Business Central 29.0.
+      SYMBOLS_FEED: https://dynamicssmb2.pkgs.visualstudio.com/DynamicsBCPublicFeeds/_packaging/MSSymbols/nuget/v3/flat2
+      BC_VERSION: 29.0.54011.55644
+      PLATFORM_VERSION: 29.0.55597
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Get the AL compiler
+        run: |
+          id=microsoft.dynamics.businesscentral.development.tools
+          curl -fsSL -o altools.nupkg "https://api.nuget.org/v3-flatcontainer/$id/$AL_TOOLS_VERSION/$id.$AL_TOOLS_VERSION.nupkg"
+          unzip -q altools.nupkg 'tools/net8.0/any/*' -d altools
+          echo "ALBIN=$PWD/altools/tools/net8.0/any" >> "$GITHUB_ENV"
+
+      - name: Get Microsoft symbols
+        run: |
+          get() {
+            curl -fsSL -o sym.nupkg "$SYMBOLS_FEED/$1/$2/$1.$2.nupkg"
+            unzip -oq sym.nupkg '*.app' -d symbols
+          }
+          get microsoft.platform.symbols "$PLATFORM_VERSION"
+          for id in \
+            microsoft.application.symbols \
+            microsoft.baseapplication.symbols.437dbf0e-84ff-417a-965d-ed2bb9650972 \
+            microsoft.businessfoundation.symbols.f3552374-a1f2-4356-848e-196002525837 \
+            microsoft.systemapplication.symbols.63ca2fa4-4f03-4f2b-a480-172fef340d3f \
+            microsoft.libraryassert.symbols.dd0be2ea-f733-4d65-bb34-a28f4624fb14 \
+            microsoft.testrunner.symbols.23de40a6-dfe8-4f80-80db-d70f83ce8caf \
+            microsoft.aitesttoolkit.symbols.2156302a-872f-4568-be0b-60968696f0d5
+          do
+            get "$id" "$BC_VERSION"
+          done
+          ls symbols
+
+      # Each app goes into symbols/ so the next one can depend on it. Any warning fails the build.
+      - name: Compile
+        run: |
+          for dir in app test eval; do
+            echo "::group::$dir"
+            set +e
+            dotnet "$ALBIN/alc.dll" /project:"$dir" /packagecachepath:symbols /out:"symbols/$dir.app" \
+              /analyzer:"$ALBIN/Microsoft.Dynamics.Nav.CodeCop.dll" \
+              /analyzer:"$ALBIN/Microsoft.Dynamics.Nav.UICop.dll" \
+              /analyzer:"$ALBIN/Microsoft.Dynamics.Nav.PerTenantExtensionCop.dll" \
+              /ruleset:EXR.ruleset.json > "$dir.log" 2>&1
+            code=$?
+            set -e
+            cat "$dir.log"
+            echo "::endgroup::"
+            if [ $code -ne 0 ] || grep -q ": warning " "$dir.log"; then
+              echo "::error::$dir: compile failed or reported warnings"
+              exit 1
+            fi
+          done

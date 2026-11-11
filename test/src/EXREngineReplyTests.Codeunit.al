@@ -76,6 +76,23 @@ codeunit 58281 "EXR Engine Reply Tests"
     end;
 
     [Test]
+    procedure SentenceFactKeepsOneFullStop()
+    var
+        RunContext: Codeunit "EXR Run Context";
+        Flagged: Boolean;
+    begin
+        // [GIVEN] a fact that is a whole sentence with its own full stop
+        RunContext.StartRun();
+        RunContext.AddPhrase('LINE-1', 'how the vendor invoice numbers match, as a full sentence', 'Only the digits match.');
+
+        // [WHEN] the model writes its token on its own, or adds a full stop after it
+        // [THEN] the sentence ends with exactly one full stop either way
+        Assert.AreEqual('Only the digits match. Ask the vendor.', Engine.Render('{F1} Ask the vendor.', RunContext, Flagged), 'token on its own');
+        Assert.AreEqual('Only the digits match. Ask the vendor.', Engine.Render('{F1}. Ask the vendor.', RunContext, Flagged), 'full stop added');
+        Assert.IsFalse(Flagged, 'nothing flagged');
+    end;
+
+    [Test]
     procedure InvalidReplyIsRetriedOnce()
     var
         InvoiceHeader: Record "Purchase Header";

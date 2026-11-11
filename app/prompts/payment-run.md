@@ -29,4 +29,4 @@ When a fact says the line was already exported to a payment file or its check wa
 
 - summary: a short note for the approver, two or three sentences: which payments to stop or check before the run is approved and why, and how many lines are clear. Use the token of the lines-checked and no-signal facts for the counts. When a fact counts lines that were not checked, say so with its token. Cite figures only with tokens.
 - A payment line's key reads as "payment" with its document number and its vendor invoice number, without the vendor, so write "hold LINE-1", never "the payment LINE-1".
-- findings: for every key, one or two sentences that explain the risk of this payment line and why the action fits, citing figures only with tokens. One action from its allowedActions and a confidence.
+- findings: for every key, one or two sentences that explain the risk of this payment line and why the action fits, citing figures only with tokens. Cite the facts behind its signals with their tokens, also the facts that are whole sentences: never retype or reword the text of a fact. One action from its allowedActions and a confidence.

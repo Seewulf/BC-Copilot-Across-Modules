@@ -1,7 +1,8 @@
 {
   "folders": [
     { "path": "app", "name": "Explain and Resolve" },
-    { "path": "test", "name": "Explain and Resolve Tests" }
+    { "path": "test", "name": "Explain and Resolve Tests" },
+    { "path": "eval", "name": "Explain and Resolve Evaluation" }
   ],
   "settings": {
     "al.enableCodeAnalysis": true,

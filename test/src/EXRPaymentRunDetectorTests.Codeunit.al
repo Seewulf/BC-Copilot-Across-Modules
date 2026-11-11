@@ -130,7 +130,7 @@ codeunit 58288 "EXR Payment Run Detector Tests"
         Assert.IsTrue(TempFinding."Action" = TempFinding."Action"::"Verify bank details by phone", 'default action');
         Assert.AreEqual(RunContext.FormatDate(Today()), ScenarioLibrary.FactValue(TempFinding."Finding Key", BankDateFactTok), 'changed on');
         Assert.AreEqual('today', ScenarioLibrary.FactValue(TempFinding."Finding Key", BankAgoFactTok), 'how long ago');
-        Assert.AreEqual('This payment goes to a bank account that changed', ScenarioLibrary.FactValue(TempFinding."Finding Key", BankTargetFactTok), 'target');
+        Assert.AreEqual('This payment goes to a bank account that changed.', ScenarioLibrary.FactValue(TempFinding."Finding Key", BankTargetFactTok), 'target');
 
         // [WHEN] the window is 0 [THEN] the check is off
         ExrRun."Bank Change Window Days" := 0;
@@ -230,11 +230,11 @@ codeunit 58288 "EXR Payment Run Detector Tests"
         Assert.AreEqual('PAID', TempFinding."Finding Type", 'type');
         Assert.IsTrue(TempFinding.Severity = TempFinding.Severity::High, 'severity');
         Assert.IsTrue(TempFinding."Action" = TempFinding."Action"::Hold, 'default action');
-        Assert.AreEqual('Nothing that this line pays is still open, so it was already paid or settled', ScenarioLibrary.FactValue(TempFinding."Finding Key", PaidFactTok), 'nothing open');
+        Assert.AreEqual('Nothing that this line pays is still open, so it was already paid or settled.', ScenarioLibrary.FactValue(TempFinding."Finding Key", PaidFactTok), 'nothing open');
         // [THEN] the line for the part-paid invoice would pay 1,000 where 600 is open
         Assert.IsTrue(PaymentRunLibrary.GetFindingForLine(TempFinding, PartPaidLineId), 'part-paid line');
         Assert.AreEqual('PAID', TempFinding."Finding Type", 'type of the part-paid line');
-        Assert.AreEqual('The line pays more than is still open on the entries it pays', ScenarioLibrary.FactValue(TempFinding."Finding Key", PaidFactTok), 'pays more');
+        Assert.AreEqual('The line pays more than is still open on the entries it pays.', ScenarioLibrary.FactValue(TempFinding."Finding Key", PaidFactTok), 'pays more');
         Assert.AreEqual(RunContext.FormatCurrencyAmount(1000, ''), ScenarioLibrary.FactValue(TempFinding."Finding Key", LineAmountFactTok), 'line amount');
         Assert.AreEqual(RunContext.FormatCurrencyAmount(600, ''), ScenarioLibrary.FactValue(TempFinding."Finding Key", OpenAmountFactTok), 'still open');
     end;

@@ -1,0 +1,50 @@
+{
+  "id": "1b0e38e2-0d18-4354-a136-6a7748abeea7",
+  "name": "Explain and Resolve Evaluation",
+  "publisher": "Prabin Bhusal",
+  "version": "1.1.0.1",
+  "brief": "Scored evaluation of Explain and Resolve against the real AI model.",
+  "description": "Runs scenarios from the test app against the real AI provider and records the output and a score. Each case makes real, billed model calls. Sandbox only.",
+  "dependencies": [
+    {
+      "id": "fd0480a3-8f77-4e94-8c93-afbff2a5c456",
+      "name": "Explain and Resolve",
+      "publisher": "Prabin Bhusal",
+      "version": "1.1.0.0"
+    },
+    {
+      "id": "cbb181cb-34c6-4131-b2d9-9e73365b341b",
+      "name": "Explain and Resolve Tests",
+      "publisher": "Prabin Bhusal",
+      "version": "1.1.0.0"
+    },
+    {
+      "id": "2156302a-872f-4568-be0b-60968696f0d5",
+      "name": "AI Test Toolkit",
+      "publisher": "Microsoft",
+      "version": "29.0.0.0"
+    },
+    {
+      "id": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
+      "name": "Library Assert",
+      "publisher": "Microsoft",
+      "version": "29.0.0.0"
+    }
+  ],
+  "platform": "1.0.0.0",
+  "application": "29.0.0.0",
+  "idRanges": [
+    {
+      "from": 58300,
+      "to": 58329
+    }
+  ],
+  "runtime": "18.0",
+  "target": "Cloud",
+  "resourceFolders": [
+    "resources"
+  ],
+  "features": [
+    "NoImplicitWith"
+  ]
+}

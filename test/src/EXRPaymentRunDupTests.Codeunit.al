@@ -22,10 +22,10 @@ codeunit 58291 "EXR Payment Run Dup. Tests"
         StatusFactTok: Label 'whether the possible duplicate is still open, as a full sentence', Locked = true;
         OrderFactTok: Label 'which of the two invoices was entered first, as a full sentence', Locked = true;
         RunFactTok: Label 'whether the possible duplicate is also paid in this run, as a full sentence', Locked = true;
-        EnteredLaterTok: Label 'This invoice was entered after the possible duplicate', Locked = true;
-        EnteredFirstTok: Label 'This invoice was entered before the possible duplicate', Locked = true;
-        NotInRunTok: Label 'The possible duplicate is not paid in this payment run', Locked = true;
-        ClosedTok: Label 'The possible duplicate is already closed, so it was paid or settled', Locked = true;
+        EnteredLaterTok: Label 'This invoice was entered after the possible duplicate.', Locked = true;
+        EnteredFirstTok: Label 'This invoice was entered before the possible duplicate.', Locked = true;
+        NotInRunTok: Label 'The possible duplicate is not paid in this payment run.', Locked = true;
+        ClosedTok: Label 'The possible duplicate is already closed, so it was paid or settled.', Locked = true;
 
     [Test]
     procedure SameNumberWrittenDifferentlyIsAHighDuplicate()
@@ -53,11 +53,11 @@ codeunit 58291 "EXR Payment Run Dup. Tests"
         Assert.IsTrue(TempFinding.Severity = TempFinding.Severity::High, 'severity');
         Assert.IsTrue(TempFinding."Action" = TempFinding."Action"::Hold, 'default action');
         Assert.AreEqual(1280, TempFinding."Amount (LCY)", 'payment amount');
-        Assert.AreEqual('The vendor invoice numbers are the same once spaces and symbols are removed', ScenarioLibrary.FactValue(TempFinding."Finding Key", MatchFactTok), 'match');
+        Assert.AreEqual('The vendor invoice numbers are the same once spaces and symbols are removed.', ScenarioLibrary.FactValue(TempFinding."Finding Key", MatchFactTok), 'match');
         Assert.AreEqual('on the same day', ScenarioLibrary.FactValue(TempFinding."Finding Key", GapFactTok), 'posted the same day');
-        Assert.AreEqual('The possible duplicate is still open', ScenarioLibrary.FactValue(TempFinding."Finding Key", StatusFactTok), 'still open');
+        Assert.AreEqual('The possible duplicate is still open.', ScenarioLibrary.FactValue(TempFinding."Finding Key", StatusFactTok), 'still open');
         Assert.AreEqual(EnteredLaterTok, ScenarioLibrary.FactValue(TempFinding."Finding Key", OrderFactTok), 'entered later');
-        Assert.AreEqual('Another line of this payment run pays the possible duplicate', ScenarioLibrary.FactValue(TempFinding."Finding Key", RunFactTok), 'twin in the run');
+        Assert.AreEqual('Another line of this payment run pays the possible duplicate.', ScenarioLibrary.FactValue(TempFinding."Finding Key", RunFactTok), 'twin in the run');
         Assert.IsTrue(TempFinding.Detail.Contains('INV-4471'), 'the other invoice is named');
 
         // [THEN] the line paying INV-4471, entered first, is flagged too but stays in the journal until the vendor confirms
@@ -92,7 +92,7 @@ codeunit 58291 "EXR Payment Run Dup. Tests"
         Assert.AreEqual('NEAR_DUP', TempFinding."Finding Type", 'type');
         Assert.IsTrue(TempFinding.Severity = TempFinding.Severity::Medium, 'severity');
         Assert.IsTrue(TempFinding."Action" = TempFinding."Action"::"Ask vendor to confirm duplicate", 'default action');
-        Assert.AreEqual('Only the digits of the vendor invoice numbers match', ScenarioLibrary.FactValue(TempFinding."Finding Key", MatchFactTok), 'match');
+        Assert.AreEqual('Only the digits of the vendor invoice numbers match.', ScenarioLibrary.FactValue(TempFinding."Finding Key", MatchFactTok), 'match');
         Assert.AreEqual('3 days apart', ScenarioLibrary.FactValue(TempFinding."Finding Key", GapFactTok), 'gap');
         Assert.AreEqual(ClosedTok, ScenarioLibrary.FactValue(TempFinding."Finding Key", StatusFactTok), 'already paid');
         Assert.AreEqual(NotInRunTok, ScenarioLibrary.FactValue(TempFinding."Finding Key", RunFactTok), 'twin not in the run');
@@ -185,7 +185,7 @@ codeunit 58291 "EXR Payment Run Dup. Tests"
         Assert.IsTrue(TempFinding.Subject.EndsWith('INV4471'), 'about the copy');
         Assert.AreEqual(PaymentRunLibrary.EntryNo(CopyNo), TempFinding."Ledger Entry No.", 'the copy is the entry to hold');
         Assert.AreEqual(2, TempFinding."Applied Entries", 'both entries recorded for the check before writing');
-        Assert.AreEqual('This payment line pays both invoices', ScenarioLibrary.FactValue(TempFinding."Finding Key", RunFactTok), 'pays both');
+        Assert.AreEqual('This payment line pays both invoices.', ScenarioLibrary.FactValue(TempFinding."Finding Key", RunFactTok), 'pays both');
         Assert.AreEqual(EnteredLaterTok, ScenarioLibrary.FactValue(TempFinding."Finding Key", OrderFactTok), 'the copy was entered later');
     end;
 

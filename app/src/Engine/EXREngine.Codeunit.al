@@ -358,6 +358,9 @@ codeunit 58202 "EXR Engine"
                     Value := '';
                     Dropped := Dropped or OwnDatesOnly;
                 end;
+                // a sentence fact brings its own full stop, so one the model adds after it is dropped
+                if Value.EndsWith('.') then
+                    Output := Output.Replace(Token + '.', Value);
                 Output := Output.Replace(Token, Value);
             until TempMatches.Next() = 0;
         // a finding key works like a token: the user sees the finding's reference, whose numbers are never flagged.
