@@ -136,6 +136,12 @@ codeunit 58207 "EXR Collections" implements "EXR Capability Handler"
         CollectCustomers(ExrRun, AsOfDate, TempCollectionCustomer, RunContext);
         Found := TempCollectionCustomer.Count();
         RunContext.AddDate('', AsOfFactTok, AsOfDate);
+        // every type code of the capability, also one no finding has, so the user never reads it
+        RunContext.AddTypeCode(OverdueTok);
+        RunContext.AddTypeCode(PromiseBrokenTok);
+        RunContext.AddTypeCode(PromisePendingTok);
+        RunContext.AddTypeCode(DisputeTok);
+        RunContext.AddTypeCode(CreditRiskTok);
         if ExrRun."Salesperson Code" <> '' then
             RunContext.AddContext('salespersonFilter', ExrRun."Salesperson Code");
         if ExrRun."Customer Posting Group" <> '' then

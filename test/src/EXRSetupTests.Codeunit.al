@@ -5,7 +5,7 @@ using System.AI;
 using System.TestLibraries.Utilities;
 using System.Upgrade;
 
-// Setup defaults, the https-only endpoint, the API key in isolated storage, and the 1.1 upgrade of the setup and capabilities.
+// Setup defaults, the https-only endpoint, the API key in isolated storage, and the 1.1 and 1.1.0.2 upgrades of the setup and capabilities.
 // RequiredTestIsolation = Codeunit rolls back the setup record and the isolated storage changes.
 codeunit 58271 "EXR Setup Tests"
 {
@@ -35,7 +35,7 @@ codeunit 58271 "EXR Setup Tests"
         Assert.AreEqual('https://api.anthropic.com/v1/messages', Setup.Endpoint, 'endpoint');
         Assert.AreEqual('2026-10-21', Setup."API Version", 'API version');
         Assert.IsTrue(Setup.Effort = Setup.Effort::Low, 'effort');
-        Assert.AreEqual(8000, Setup."Max Output Tokens", 'max output tokens');
+        Assert.AreEqual(16000, Setup."Max Output Tokens", 'max output tokens');
         Assert.AreEqual(50, Setup."Daily Calls per User", 'daily calls per user');
         Assert.AreEqual(500, Setup."Daily Calls per Company", 'daily calls per company');
     end;
@@ -150,6 +150,78 @@ codeunit 58271 "EXR Setup Tests"
         Assert.AreEqual(7, Setup."Duplicate Window Days", 'duplicate window kept');
         Assert.AreEqual(3, Setup."Bank Change Window Days", 'bank-change window kept');
         Assert.AreEqual(50, Setup."Unusual Amount %", 'threshold kept');
+    end;
+
+    [Test]
+    procedure UpgradeRaisesTheOldMaxOutputTokensDefault()
+    var
+        Setup: Record "EXR Setup";
+        Upgrade: Codeunit "EXR Upgrade";
+    begin
+        // [GIVEN] a setup with the default of 1.1.0.1 and its own model
+        Setup.InsertIfMissing();
+        Setup."Max Output Tokens" := 8000;
+        Setup.Model := 'claude-test-model';
+        Setup.Modify();
+
+        // [WHEN] the upgrade raises the old default
+        Upgrade.RaiseOldMaxOutputTokens();
+
+        // [THEN] it gets the new default and the model stays
+        Setup.Get();
+        Assert.AreEqual(16000, Setup."Max Output Tokens", 'new default');
+        Assert.AreEqual('claude-test-model', Setup.Model, 'model kept');
+    end;
+
+    [Test]
+    procedure UpgradeKeepsAChosenMaxOutputTokens()
+    var
+        Setup: Record "EXR Setup";
+        Upgrade: Codeunit "EXR Upgrade";
+    begin
+        // [GIVEN] a setup whose administrator chose another limit
+        Setup.InsertIfMissing();
+        Setup."Max Output Tokens" := 12000;
+        Setup.Modify();
+
+        // [WHEN] the upgrade raises the old default
+        Upgrade.RaiseOldMaxOutputTokens();
+
+        // [THEN] the chosen limit stays
+        Setup.Get();
+        Assert.AreEqual(12000, Setup."Max Output Tokens", 'chosen limit kept');
+
+        // [WHEN] a lower limit was chosen [THEN] it stays too
+        Setup."Max Output Tokens" := 4000;
+        Setup.Modify();
+        Upgrade.RaiseOldMaxOutputTokens();
+        Setup.Get();
+        Assert.AreEqual(4000, Setup."Max Output Tokens", 'lower limit kept');
+    end;
+
+    [Test]
+    procedure MaxOutputTokensUpgradeRunsOncePerCompany()
+    var
+        Setup: Record "EXR Setup";
+        Install: Codeunit "EXR Install";
+        Upgrade: Codeunit "EXR Upgrade";
+        UpgradeTag: Codeunit "Upgrade Tag";
+        PerCompanyTags: List of [Code[250]];
+    begin
+        // [GIVEN] a company that installed or upgraded to 1.1.0.2, and an administrator who set 8000 again later
+        Assert.IsTrue(UpgradeTag.HasUpgradeTag(Install.MaxOutputTokensTag()), 'tag set by install or upgrade');
+        UpgradeTag.GetPerCompanyUpgradeTags(PerCompanyTags);
+        Assert.IsTrue(PerCompanyTags.Contains(Install.MaxOutputTokensTag()), 'a new company gets the tag');
+        Setup.InsertIfMissing();
+        Setup."Max Output Tokens" := 8000;
+        Setup.Modify();
+
+        // [WHEN] the upgrade runs again
+        Upgrade.UpgradeMaxOutputTokens();
+
+        // [THEN] it changes nothing
+        Setup.Get();
+        Assert.AreEqual(8000, Setup."Max Output Tokens", 'value set after the upgrade kept');
     end;
 
     [Test]

@@ -48,8 +48,8 @@ table 58200 "EXR Setup"
         field(20; "Max Output Tokens"; Integer)
         {
             Caption = 'Max Output Tokens';
-            // room for thinking at higher effort and for one reminder per customer
-            InitValue = 8000;
+            // room for thinking at Effort High and for one reminder per customer; 8000 (before 1.1.0.2) was cut off at High
+            InitValue = 16000;
             MinValue = 256;
             MaxValue = 128000;
             ToolTip = 'Specifies the most tokens the model may write in one reply, thinking included. A reply that reaches this limit is cut off and cannot be used.';

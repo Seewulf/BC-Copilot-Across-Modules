@@ -32,6 +32,7 @@ codeunit 58203 "EXR Run Context"
         QuantityFormatTok: Label '<Precision,0:5><Standard Format,0>', Locked = true;
         PercentFormatTok: Label '<Precision,0:2><Standard Format,0>', Locked = true;
         DateFormatTok: Label '<Day> <Month Text> <Year4>', Locked = true;
+        TypeCodes: List of [Text];
 
     procedure StartRun()
     begin
@@ -45,6 +46,7 @@ codeunit 58203 "EXR Run Context"
         Clear(ContextOwners);
         Clear(CurrencyCodes);
         Clear(FindingReferences);
+        Clear(TypeCodes);
         EmailReferenceText := '';
         LcyLoaded := false;
         LoadLcy();
@@ -128,6 +130,18 @@ codeunit 58203 "EXR Run Context"
     begin
         if not FindingReferences.ContainsKey(FindingKey) then
             FindingReferences.Add(FindingKey, Reference);
+    end;
+
+    // A type code of the capability, such as BANK or NOT_RECEIVED, which the user never sees either; every code, found in this run or not.
+    procedure AddTypeCode(TypeCode: Text)
+    begin
+        if (TypeCode <> '') and not TypeCodes.Contains(TypeCode) then
+            TypeCodes.Add(TypeCode);
+    end;
+
+    procedure FindingTypeCodes(): List of [Text]
+    begin
+        exit(TypeCodes);
     end;
 
     procedure FindingKeys(): List of [Text]

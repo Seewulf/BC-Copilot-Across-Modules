@@ -16,6 +16,8 @@ codeunit 58200 "EXR Install"
         // 1.1: Check payment run registered, and its setup defaults
         PaymentRunCapabilityTagTok: Label 'EXR-PaymentRunCapability-20261103', Locked = true;
         PaymentRunDefaultsTagTok: Label 'EXR-PaymentRunSetupDefaults-20261103', Locked = true;
+        // 1.1.0.2: the old Max Output Tokens default of 8000 raised to 16000
+        MaxOutputTokensTagTok: Label 'EXR-MaxOutputTokens-20261112', Locked = true;
 
     trigger OnInstallAppPerDatabase()
     var
@@ -34,6 +36,8 @@ codeunit 58200 "EXR Install"
             UpgradeTag.SetUpgradeTag(ReviewDefaultsTag());
         if not UpgradeTag.HasUpgradeTag(PaymentRunDefaultsTag()) then
             UpgradeTag.SetUpgradeTag(PaymentRunDefaultsTag());
+        if not UpgradeTag.HasUpgradeTag(MaxOutputTokensTag()) then
+            UpgradeTag.SetUpgradeTag(MaxOutputTokensTag());
     end;
 
     internal procedure RegisterCapabilities()
@@ -58,6 +62,11 @@ codeunit 58200 "EXR Install"
         exit(PaymentRunDefaultsTagTok);
     end;
 
+    internal procedure MaxOutputTokensTag(): Code[250]
+    begin
+        exit(MaxOutputTokensTagTok);
+    end;
+
     local procedure RegisterCapability(Capability: Enum "Copilot Capability")
     var
         CopilotCapability: Codeunit "Copilot Capability";
@@ -73,6 +82,7 @@ codeunit 58200 "EXR Install"
     begin
         PerCompanyUpgradeTags.Add(ReviewDefaultsTag());
         PerCompanyUpgradeTags.Add(PaymentRunDefaultsTag());
+        PerCompanyUpgradeTags.Add(MaxOutputTokensTag());
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Upgrade Tag", OnGetPerDatabaseUpgradeTags, '', false, false)]

@@ -93,6 +93,27 @@ codeunit 58281 "EXR Engine Reply Tests"
     end;
 
     [Test]
+    procedure TypeCodeNextToAKeyIsHidden()
+    var
+        RunContext: Codeunit "EXR Run Context";
+        Flagged: Boolean;
+    begin
+        // [GIVEN] a run with one OVERDUE finding, whose key starts with its type code, and the capability's DISPUTE code
+        RunContext.StartRun();
+        RunContext.AddFindingReference('OVERDUE-1', 'Fabrikam');
+        RunContext.AddTypeCode('OVERDUE');
+        RunContext.AddTypeCode('DISPUTE');
+
+        // [WHEN] the model names the finding by its key and writes the type code after it
+        // [THEN] the key still shows the reference and the code is gone
+        Assert.AreEqual('Call Fabrikam today.', Engine.Render('Call OVERDUE-1 today (OVERDUE).', RunContext, Flagged), 'key kept, code dropped');
+        Assert.AreEqual('Overdue invoices come first.', Engine.Render('OVERDUE invoices come first.', RunContext, Flagged), 'bare code at the start');
+        // [THEN] a bracket at the start leaves no space, and spaces or a slash inside a bracket do not keep it
+        Assert.AreEqual('Call Fabrikam today.', Engine.Render('(OVERDUE) Call OVERDUE-1 today ( OVERDUE / DISPUTE ).', RunContext, Flagged), 'brackets dropped');
+        Assert.IsFalse(Flagged, 'nothing flagged');
+    end;
+
+    [Test]
     procedure InvalidReplyIsRetriedOnce()
     var
         InvoiceHeader: Record "Purchase Header";

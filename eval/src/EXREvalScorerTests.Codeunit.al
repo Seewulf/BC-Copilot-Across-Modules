@@ -204,8 +204,13 @@ codeunit 58307 "EXR Eval Scorer Tests"
         // [WHEN] it is scored
         Output := ScoreReply(BankCase(), ReplyText);
 
-        // [THEN] the user would read an internal type code
-        Assert.IsFalse(CheckPassed(Output, 'no_internal_keys', ''), 'BANK');
+        // [THEN] since 1.1.0.2 rendering writes the code as a word, so the user never reads it
+        Assert.IsTrue(CheckPassed(Output, 'no_internal_keys', ''), 'BANK');
+        Assert.IsTrue(AsText(Output).Contains('Check the bank signal first.'), AsText(Output));
+
+        // [WHEN] the model makes up a key from the code, which rendering leaves for the key step [THEN] the user would read it
+        Output := ScoreReply(BankCase(), ReplyText.Replace('the BANK signal', 'BANK-2'));
+        Assert.IsFalse(CheckPassed(Output, 'no_internal_keys', ''), 'BANK-2');
     end;
 
     [Test]

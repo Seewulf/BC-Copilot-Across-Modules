@@ -275,6 +275,39 @@ codeunit 58289 "EXR Payment Run Request Tests"
     end;
 
     [Test]
+    procedure TypeCodesNeverReachTheUser()
+    var
+        GenJournalBatch: Record "Gen. Journal Batch";
+        ExrRun: Record "EXR Run";
+        TempFinding: Record "EXR Finding" temporary;
+        Findings: JsonArray;
+        FirstKey: Text;
+    begin
+        // [GIVEN] the demo (DUPLICATE+BANK, DUP_COPY+BANK and FIRST) and a reply that writes type codes, as a live run on 12 November 2026 did,
+        // also ON_HOLD and NEAR_DUP, which no line of the demo has
+        PaymentRunLibrary.Initialise();
+        PaymentRunLibrary.CreateDemoScenario(GenJournalBatch);
+        Commit();
+        PaymentRunLibrary.NewRun(GenJournalBatch, ExrRun);
+        PaymentRunLibrary.FindSignals(ExrRun, TempFinding);
+        TempFinding.SetRange("Finding Type", 'FIRST');
+        TempFinding.FindFirst();
+        FirstKey := TempFinding."Finding Key";
+        Findings.Add(PaymentRunLibrary.FindingReply(FirstKey, 'This is the first payment posted to this vendor (FIRST), so there is no earlier payment history.', 'Pay'));
+        MockChatClient.QueueReply(PaymentRunLibrary.Reply('Two lines are DUPLICATE+BANK (DUPLICATE+BANK). Check them first (BANK, FIRST). No line is ON_HOLD or NEAR_DUP. NOT_RECEIVED is not a signal here.', Findings), 100, 10, 100);
+
+        // [WHEN] it is generated
+        Engine.Generate(ExrRun, TempFinding);
+
+        // [THEN] a code in brackets is gone, a bare one reads as words, and "first" and another capability's code stay
+        Assert.AreEqual('Two lines are duplicate and bank. Check them first. No line is on hold or near dup. NOT_RECEIVED is not a signal here.', ExrRun.Summary, 'approver note');
+        TempFinding.SetRange("Finding Key", FirstKey);
+        TempFinding.FindFirst();
+        Assert.AreEqual('This is the first payment posted to this vendor, so there is no earlier payment history.', TempFinding.Description, 'explanation');
+        Assert.IsFalse(ExrRun."Unverified Figures", 'nothing flagged');
+    end;
+
+    [Test]
     procedure NothingFoundMeansNoCall()
     var
         GenJournalBatch: Record "Gen. Journal Batch";

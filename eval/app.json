@@ -2,7 +2,7 @@
   "id": "1b0e38e2-0d18-4354-a136-6a7748abeea7",
   "name": "Explain and Resolve Evaluation",
   "publisher": "Prabin Bhusal",
-  "version": "1.1.0.1",
+  "version": "1.1.0.2",
   "brief": "Scored evaluation of Explain and Resolve against the real AI model.",
   "description": "Runs scenarios from the test app against the real AI provider and records the output and a score. Each case makes real, billed model calls. Sandbox only.",
   "dependencies": [
@@ -10,7 +10,7 @@
       "id": "fd0480a3-8f77-4e94-8c93-afbff2a5c456",
       "name": "Explain and Resolve",
       "publisher": "Prabin Bhusal",
-      "version": "1.1.0.0"
+      "version": "1.1.0.2"
     },
     {
       "id": "cbb181cb-34c6-4131-b2d9-9e73365b341b",

@@ -29,7 +29,7 @@ Each check is recorded on its own with its target and a detail. A case's score i
 | reply_valid | every case | the run generated, not failed closed. When it fails, no other check is applied and the score is 0 |
 | no_invented_figures | every case | Business Central flagged no figure, address, IBAN or phone number the model wrote itself. Its pattern needs a currency, two decimals, a thousands separator, a % or a long digit run, so it misses bare numbers |
 | no_model_digits | every case | the model wrote no digit outside a fact token or a finding key (shared rule 1). It also counts a true number copied from a caption, such as "12 months", or a line number copied from a subject |
-| no_internal_keys | every case | the text the user reads has no type code (such as NOT_RECEIVED, or a single-word type such as BANK or OVERDUE) and no key of the run's shape (such as LINE-7) |
+| no_internal_keys | every case | the text the user reads has no type code (such as NOT_RECEIVED, or a single-word type such as BANK or OVERDUE) and no key of the run's shape (such as LINE-7). Since app 1.1.0.2 Business Central hides the capability's own type codes before the user reads the text, so this check now fails mainly on a leaked key (such as LINE-7 or BANK-2), on a type code of another capability, or on a word in capitals that Business Central put in from a record |
 | action_acceptable | each finding, when the reply schema offers an action outside the dataset's list | the action the model chose is in the dataset's list for that finding |
 | facts_cited | each finding | the model's explanation cites at least one fact token of that finding; with `must_cite`, one whose caption is in that list. A finding of type FIRST alone has no fact that states its signal, so any own fact counts |
 | no_cross_talk | each finding, when the run has a finding it is not linked to | the explanation cites no fact token of another finding, unless the dataset links the two |
@@ -47,12 +47,12 @@ Limits: the trap check finds verbatim repetition, not a paraphrase. The acceptab
 
 | Codeunit | What it proves |
 |---|---|
-| 58307 EXR Eval Scorer Tests | every check can fail: an invented figure, a bare number, a leaked key or single-word type, a wrong action, the marker, a repeated rule, cross-talk, a missing or non-signal fact, an address, the phrases, a failed run, a scenario error and a trap missing from the request; and a check the schema decides is not counted. The mock answers through the recorder |
+| 58307 EXR Eval Scorer Tests | every check can fail: an invented figure, a bare number, a leaked key or a code-shaped key such as BANK-2, a wrong action, the marker, a repeated rule, cross-talk, a missing or non-signal fact, an address, the phrases, a failed run, a scenario error and a trap missing from the request; and a check the schema decides is not counted. It also shows that a single-word type such as BANK, written by the model, is hidden by app 1.1.0.2 and so passes. The mock answers through the recorder |
 | 58308 EXR Eval Dataset Tests | every dataset case builds, Business Central finds exactly its expected findings, each must_cite list names a fact of its finding, and every trap text reaches the request |
 
 ## Running it
 
-1. Publish the main app, the test app and this app to a sandbox. The install and upgrade code import the datasets and the suite (raise this app's version so the upgrade code runs).
+1. Publish the main app, the test app and this app to a sandbox. This app and the test app need Explain and Resolve 1.1.0.2 or later. The install and upgrade code import the datasets and the suite (raise this app's version so the upgrade code runs).
 2. Run the free tests (58307 and 58308).
 3. Optional: `SuiteStatus` of codeunit 58309 prints the suite lines and dataset sizes, and the `Smoke` methods run one case per capability against the real provider and print the scored result. These methods stop with their result as the error text on purpose, for test runners that report nothing else.
 4. Open **AI Eval Suites**, select **EXR-EVAL** and choose **Run**, or run one line at a time with **Run selected**. The full suite is 31 cases.

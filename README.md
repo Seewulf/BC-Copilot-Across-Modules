@@ -60,7 +60,7 @@ Afterwards: reopen the invoice to see the latest kept review in the **Variance r
 
 ### Plan collections
 
-Where: the **Plan collections** Copilot action on the **Customer List** page. In the dialog you can filter on **Salesperson** and **Customer posting group**, and set **Max. customers** (10 by default, at most 25). With the default Max Output Tokens of 8,000, a plan with more than 23 customers stops before the call (see **Output size** below).
+Where: the **Plan collections** Copilot action on the **Customer List** page. In the dialog you can filter on **Salesperson** and **Customer posting group**, and set **Max. customers** (10 by default, at most 25). With the default Max Output Tokens of 16,000 the output-size check allows all 25; with a lower limit a larger plan can stop before the call (see **Output size** below).
 
 Business Central ages the open entries as of the work date and works in local currency. Remaining amounts, balances and credit limit use are today's values. For every customer with open invoices or other debts past their due date, it computes:
 
@@ -150,14 +150,14 @@ Recipients always come from Business Central, and each action comes from that fi
 - **What is sent to the AI provider.** The prompt files, the vendor name or each customer's number and name, item and account numbers with line descriptions, the invoice number and vendor invoice number, the posted invoice numbers and vendor invoice numbers of possible duplicates, invoice line numbers, each finding's type, severity and allowed actions, the salesperson and customer posting group filters, the email tone, your note, and every computed figure (amounts, quantities, dates and percentages) with its caption. For Check payment run it also sends the journal batch name, each flagged line's vendor number and name and payment document number, the vendor invoice number and description of the invoice the line pays and of a possible duplicate, the possible duplicate's document number and an existing hold code. No bank details are sent; see **Check payment run** above.
 - **Email addresses and bank details from vendor and customer cards are not sent.** The recipient is taken from the card only when you keep the review, and the lists of documents in the emails are built by Business Central at that point. Text that people type, such as the note, names and descriptions, is sent as typed.
 - **Daily limits.** The setup caps the runs per user (50 by default) and per company (500 by default) each day. The limits count runs, not provider calls: a retried run counts once, and Test Connection does not count. A blocked attempt is logged as Blocked by Limit and does not count. The count takes no lock, so runs started at the same moment can go slightly over the cap.
-- **Output size is estimated first.** Before a Plan collections call, Business Central estimates the reply at 1,000 tokens plus 300 per customer and stops with a message if that is above **Max Output Tokens**. With the default of 8,000 the estimate allows up to 23 customers. The estimate is rough: in the measured demo run at Effort High, 4 customers used 3,976 output tokens. A reply that is still cut off fails the run, so at higher effort review fewer customers or raise Max Output Tokens.
+- **Output size is estimated first.** Before a Plan collections call, Business Central estimates the reply at 1,000 tokens plus 300 per customer and stops with a message if that is above **Max Output Tokens**. With the default of 16,000 the estimate allows up to 50 customers, more than the dialog's 25. The estimate is rough: in the measured demo run at Effort High, 4 customers used 3,976 output tokens. A reply that is still cut off fails the run, so at higher effort review fewer customers or raise Max Output Tokens. A higher limit has a cost in time: with claude-haiku-5-5 a reply of 16,000 output tokens would take about 75 seconds (the rate measured in evaluation run 3), and a reply that takes more than 120 seconds fails the run.
 - **The API key is protected.** It is kept in isolated storage (encrypted when encryption is turned on), never in a table, and is never shown again after it is entered. It is sent only over https, and only to the endpoint it was entered for: change the endpoint and the key must be entered again. Only users who can change the setup can set or remove it. The key is shared by all companies of the environment, so setting or removing it in one company changes it for all of them.
 - **No write transaction during the call.** Nothing is written to the database before the model call, and the call runs through `Codeunit.Run`, which Business Central refuses to start inside an open write transaction. The run is saved after the reply arrives.
 - **Usage events hold usage figures only.** Each run logs a feature telemetry event with the capability, token counts and duration, never document or ledger data. The app has no Application Insights connection string and registers no telemetry logger yet, so the publisher does not receive these events. The Runs page keeps the same figures.
 
 ## Set up
 
-1. **Install** the extension. Build `app/` with the AL Language extension in Visual Studio Code and publish it to a sandbox, or upload the built `.app` file with **Upload Extension** on the **Extension Management** page. Microsoft removes an app published from Visual Studio Code when the sandbox is updated, so publish it again after an update; an uploaded app stays. Use the upload route for a production environment. Installing registers the three Copilot capabilities. Upgrading from 1.0 registers Check payment run and fills its three new setup fields with their defaults; the other setup values stay as they were.
+1. **Install** the extension. Build `app/` with the AL Language extension in Visual Studio Code and publish it to a sandbox, or upload the built `.app` file with **Upload Extension** on the **Extension Management** page. Microsoft removes an app published from Visual Studio Code when the sandbox is updated, so publish it again after an update; an uploaded app stays. Use the upload route for a production environment. Installing registers the three Copilot capabilities. Upgrading from 1.0 registers Check payment run and fills its three new setup fields with their defaults; the other setup values stay as they were. Upgrading to 1.1.0.2 raises **Max Output Tokens** from 8,000 to the new default of 16,000, once per company and only when it is still 8,000; any other value stays.
 2. **Assign permission sets** on top of the users' normal Business Central permissions.
 
    | Permission set | For |
@@ -176,7 +176,7 @@ Recipients always come from Business Central, and each action comes from that fi
    | API Version | 2026-10-21 | Sent with every request. |
    | API Key | (empty) | Masked. **Remove API Key** deletes it for all companies. |
    | Effort | Low | How much the model thinks before it answers: Low, Medium or High. Higher effort takes longer and uses more tokens. A reply that takes more than 120 seconds fails the run. |
-   | Max Output Tokens | 8000 | The most tokens one reply may use, thinking included (256 to 128,000). A reply cut off at this limit cannot be used. |
+   | Max Output Tokens | 16000 | The most tokens one reply may use, thinking included (256 to 128,000). A reply cut off at this limit cannot be used. A reply of 16,000 tokens would take about 75 seconds with claude-haiku-5-5 (about 215 output tokens per second in evaluation run 3), and a reply that takes more than 120 seconds fails the run, so with a slower model or a higher limit the time limit can come first. |
    | Daily Calls per User | 50 | Runs one user can start per day. |
    | Daily Calls per Company | 500 | Runs all users in the company can start per day. |
    | Variance Tolerance % | 2 | Default tolerance for Explain invoice variance. Users can change it in the dialog. |
@@ -217,13 +217,13 @@ The cost is worked out at USD 0.10 per million input tokens and USD 0.50 per mil
 
 ## Tests
 
-The test app has 146 automated tests in 18 test codeunits. The 97 tests of version 1.0 all passed in a Business Central 29 sandbox on 2 November 2026. Version 1.1 adds 49 tests: 40 for Check payment run, 5 for its setup fields, upgrade and registration, 3 for how the engine shows a finding the model names, and 1 (in 1.1.0.1) for the full stop after a fact that is a whole sentence. All 146 tests passed on version 1.1.0.1 in the same sandbox on 11 November 2026. The AI provider is replaced by a mock client, so the tests make no calls to a real AI service, cost nothing and give the same result every run. The mock records each request, so the tests can check exactly what would be sent.
+The test app has 151 automated tests in 18 test codeunits. The 97 tests of version 1.0 all passed in a Business Central 29 sandbox on 2 November 2026. Version 1.1 adds 49 tests: 40 for Check payment run, 5 for its setup fields, upgrade and registration, 3 for how the engine shows a finding the model names, and 1 (in 1.1.0.1) for the full stop after a fact that is a whole sentence. All 146 tests passed on version 1.1.0.1 in the same sandbox on 11 November 2026. Version 1.1.0.2 adds 5: 3 for raising the old Max Output Tokens default of 8,000 to 16,000 once, and 2 for hiding finding type codes such as (FIRST) from the user. All 151 passed on version 1.1.0.2 in the same sandbox on 12 November 2026. Since 1.1.0.2 the test app and the evaluation app need Explain and Resolve 1.1.0.2 or later. The AI provider is replaced by a mock client, so the tests make no calls to a real AI service, cost nothing and give the same result every run. The mock records each request, so the tests can check exactly what would be sent.
 
 What the tests cover:
 
 - **Claude API client:** the request body, effort and JSON schema, no sampling parameters, thinking blocks skipped, refusals and cut-off replies, and clear messages for an invalid key, rate limits, overload and used-up credits.
-- **Setup and Test Connection:** defaults, https only, setting and removing the key, a changed endpoint stopping the call, replies outside the schema, and the 1.1 upgrade: the new setup fields filled once without changing other values, the upgrade tags and the capability registration.
-- **Engine:** capability switched off, missing key, daily limits per user and company, the strict reply schema, unknown findings, tokens and actions dropped, a finding key in the model's text shown as the finding's subject, another customer's key never named in a reminder, one full stop after a fact that is a whole sentence, untrusted text tagged and escaped, stray figures, currency codes, percentages, addresses, phone numbers and bank details flagged, one retry then fail closed, and no model call when nothing is found.
+- **Setup and Test Connection:** defaults, https only, setting and removing the key, a changed endpoint stopping the call, replies outside the schema, the 1.1 upgrade: the new setup fields filled once without changing other values, the upgrade tags and the capability registration, and the 1.1.0.2 upgrade: Max Output Tokens raised from 8,000 to 16,000 once per company, while a value someone chose (such as 12,000 or 4,000) stays.
+- **Engine:** capability switched off, missing key, daily limits per user and company, the strict reply schema, unknown findings, tokens and actions dropped, a finding key in the model's text shown as the finding's subject, another customer's key never named in a reminder, one full stop after a fact that is a whole sentence, finding type codes such as (FIRST) or DUPLICATE+BANK never shown to the user, also next to a finding key, untrusted text tagged and escaped, stray figures, currency codes, percentages, addresses, phone numbers and bank details flagged, one retry then fail closed, and no model call when nothing is found.
 - **Explain invoice variance:** each check, including the tolerance edge, cheaper invoices, the price history from up to three posted lines, hand-keyed and split lines, variants, duplicate numbers written differently, open invoices only, Keep it putting the invoice on hold without posting, a blank or existing hold code, and the vendor invoice number in the subject.
 - **Plan collections:** age buckets, usual delay from invoices paid by a payment, promises, disputes and holds, unapplied payments, credit limit use, ranking and Max. customers, the filters, the allowed actions per situation, no email address or bank data in the request, one email per customer, the output size check, the worklist and drafts on Keep it, and the Collections review FactBox.
 - **Check payment run:** possible duplicates with the number written differently or only the digits matching, the window edges, other numbers or amounts and numbers with fewer than 3 digits, the copy held and the first invoice kept, a summarised line that pays both copies, a copy already cancelled with a credit memo, a copy already paid and the true order sent to the model, lines whose invoice was paid in full or in part after the line was made, the amount against the median at its threshold edge and with too few payments, a bank account added today and the bank check turned off, first payments, invoices already on hold (also with a bank change), lines with the vendor as balancing account counted but not checked, the demo's findings, no IBAN, account number, SWIFT code or bank name in the request, names and descriptions tagged as untrusted, no email in the schema, the allowed actions per signal, the model unable to pay a risky line or take a Hold away, phone numbers in the reply flagged, failing closed and keeping a failed run, and Keep it: only accepted Hold lines deleted, every invoice of a line with a bank change held but not its credit memo, only the copy held on a summarised line, an existing hold code kept, the held invoices listed on the kept finding, a changed, deleted or exported line and an invoice added after the check each stopping Keep it with nothing kept, a blank Hold Code refused, Keep it for a user with only D365 READ and Explain and Resolve - User, Discard writing only the run row, and the Payment run review FactBox. A bank change older than the window is not tested, because a test cannot set the time a record was changed.
@@ -233,7 +233,7 @@ Several tests take ledger fingerprints after Generate and compare them after Kee
 
 The evaluation app (`eval/`) has its own tests:
 
-- **21 free tests in 2 codeunits**, which use the mock and cost nothing. Both passed on 11 November 2026.
+- **21 free tests in 2 codeunits**, which use the mock and cost nothing. All 21 passed on evaluation app 1.1.0.2 on 12 November 2026.
   - 58307 EXR Eval Scorer Tests (18 tests) shows that every check of the scorer can fail.
   - 58308 EXR Eval Dataset Tests (3 tests) builds every dataset case, checks that Business Central finds exactly the expected findings, and checks that every trap text reaches the request.
 - **Two codeunits that are not free tests:** 58300 runs the suite cases against the real provider, with billed calls. 58309 holds the console methods: the suite status, billed smoke runs and the result export. See **Evaluation** below.
@@ -242,24 +242,24 @@ The evaluation app (`eval/`) has its own tests:
 
 The evaluation app runs the three capabilities against the real model on 31 scenarios built in a sandbox. It uses Microsoft's AI Test Toolkit and scores each reply with deterministic checks in AL. 11 of the scenarios carry an injected instruction (a trap) in a vendor or customer name, a description, an invoice number or the user's note.
 
-Run 2, on 11 November 2026, used app 1.1.0.1 and claude-haiku-5-5 at Effort High, with Max Output Tokens 8,000:
+Run 3, on 12 November 2026, used app 1.1.0.2 and claude-haiku-5-5 at Effort High, with Max Output Tokens 16,000:
 
-| Capability | Mean case score | Cases with every check passed |
-|---|---|---|
-| Explain invoice variance | 0.973 | 9 of 11 |
-| Plan collections | 0.974 | 6 of 9 |
-| Check payment run | 0.881 | 8 of 11 |
-| All | 0.941 | 23 of 31 |
+| Capability | Mean case score | Cases with every check passed | Checks passed |
+|---|---|---|---|
+| Explain invoice variance | 0.987 | 10 of 11 | 93 of 94 |
+| Plan collections | 0.976 | 6 of 9 | 96 of 99 |
+| Check payment run | 0.972 | 9 of 11 | 78 of 80 |
+| All | 0.978 | 25 of 31 | 267 of 273 |
 
 - **Traps:** 11 of 11 were resisted.
-- **Checks:** 253 of 261 passed.
-- **Failed closed:** one case. The three-finding demo payment run hit the 8,000 output-token limit and was cut off.
-- **Cost:** 31 model calls, about USD 0.05.
-- **The other failures:**
-  - In 3 cases the model wrote a number itself, copied from a subject or a fact caption.
-  - In 4 cases an explanation did not cite the fact behind its finding.
+- **Checks:** 267 of 273 passed (97.8%).
+- **Failed closed:** none. The three-finding demo payment run, which hit the 8,000 output-token limit in run 2, completed with 7,794 output tokens. That is below the old limit too, so this one run does not show that 16,000 was needed: at Effort High the output size varies from run to run.
+- **Cost:** 31 model calls, 104,535 input and 93,364 output tokens, about USD 0.06.
+- **The failures:**
+  - In 5 cases the model wrote a number itself. Each number is true: "12 months", "1-30 days" or "90 days" copied from a fact caption, or the vendor invoice number in an email.
+  - In 1 case an explanation did not cite the fact behind its finding (the disputed amount).
   - They are published as they came, and nothing was re-run.
-- **Run 1**, the same day, scored 0.988 on looser checks. The results page says what was tightened and why.
+- **Run 2**, on 11 November 2026 with app 1.1.0.1 and Max Output Tokens 8,000, scored 0.941 on the same checks (23 of 31 cases with every check passed, one failed closed). **Run 1**, the same day, scored 0.988 on looser checks. The results page says what changed between the runs and why.
 
 What is measured, case by case:
 

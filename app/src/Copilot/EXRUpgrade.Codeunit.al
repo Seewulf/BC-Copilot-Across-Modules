@@ -25,6 +25,7 @@ codeunit 58201 "EXR Upgrade"
     begin
         UpgradeReviewDefaults();
         UpgradePaymentRunDefaults();
+        UpgradeMaxOutputTokens();
     end;
 
     // Once per company: without it an existing setup would have every payment run check turned off (0 days, 0%).
@@ -51,6 +52,33 @@ codeunit 58201 "EXR Upgrade"
         Setup."Duplicate Window Days" := DefaultSetup."Duplicate Window Days";
         Setup."Bank Change Window Days" := DefaultSetup."Bank Change Window Days";
         Setup."Unusual Amount %" := DefaultSetup."Unusual Amount %";
+        Setup.Modify();
+    end;
+
+    // Once per company: Effort High was cut off at the old default of 8000.
+    internal procedure UpgradeMaxOutputTokens()
+    var
+        Install: Codeunit "EXR Install";
+        UpgradeTag: Codeunit "Upgrade Tag";
+    begin
+        if UpgradeTag.HasUpgradeTag(Install.MaxOutputTokensTag()) then
+            exit;
+        RaiseOldMaxOutputTokens();
+        UpgradeTag.SetUpgradeTag(Install.MaxOutputTokensTag());
+    end;
+
+    // Only the untouched old default moves to the new one; any value the company chose stays.
+    internal procedure RaiseOldMaxOutputTokens()
+    var
+        Setup: Record "EXR Setup";
+        DefaultSetup: Record "EXR Setup";
+    begin
+        if not Setup.Get() then
+            exit;
+        if Setup."Max Output Tokens" <> 8000 then
+            exit;
+        DefaultSetup.Init();
+        Setup."Max Output Tokens" := DefaultSetup."Max Output Tokens";
         Setup.Modify();
     end;
 

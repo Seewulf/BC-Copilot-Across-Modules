@@ -152,6 +152,14 @@ codeunit 58206 "EXR Purch. Variance" implements "EXR Capability Handler"
         // the vendor needs its own invoice number in the subject
         RunContext.SetEmailReference(PurchaseHeader."Vendor Invoice No.");
         RunContext.AddPercent('', ToleranceFactTok, TolerancePct);
+        // every type code of the capability, also one no finding has, so the user never reads it
+        RunContext.AddTypeCode(NotReceivedTok);
+        RunContext.AddTypeCode(PriceVsOrderTok);
+        RunContext.AddTypeCode(PriceVsHistoryTok);
+        RunContext.AddTypeCode(DiscountVsOrderTok);
+        RunContext.AddTypeCode(NoOrderLinkTok);
+        RunContext.AddTypeCode(ChargeNotAssignedTok);
+        RunContext.AddTypeCode(DuplicateTok);
 
         PurchaseLine.SetRange("Document Type", PurchaseHeader."Document Type");
         PurchaseLine.SetRange("Document No.", PurchaseHeader."No.");

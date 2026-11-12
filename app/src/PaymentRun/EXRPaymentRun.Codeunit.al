@@ -188,6 +188,15 @@ codeunit 58208 "EXR Payment Run" implements "EXR Capability Handler"
         RunContext.AddPhrase('', DuplicateWindowFactTok, RunContext.CountPhrase(DuplicateWindowDays, OneDayLbl, DaysLbl));
         RunContext.AddPhrase('', BankWindowFactTok, RunContext.CountPhrase(BankWindowDays, OneDayLbl, DaysLbl));
         RunContext.AddPercent('', ThresholdFactTok, UnusualAmountPct);
+        // every type code of the capability, also one no finding has, so the user never reads it
+        RunContext.AddTypeCode(PaidTok);
+        RunContext.AddTypeCode(DupCopyTok);
+        RunContext.AddTypeCode(DuplicateTok);
+        RunContext.AddTypeCode(NearDupTok);
+        RunContext.AddTypeCode(BankTok);
+        RunContext.AddTypeCode(OnHoldTok);
+        RunContext.AddTypeCode(AmountTok);
+        RunContext.AddTypeCode(FirstTok);
 
         // a check that feeds no write: read committed; Keep it reads each held line again with a lock
         GenJournalLine.ReadIsolation := IsolationLevel::ReadCommitted;

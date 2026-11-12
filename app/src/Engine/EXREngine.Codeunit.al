@@ -342,7 +342,7 @@ codeunit 58202 "EXR Engine"
         Found: Boolean;
         Dropped: Boolean;
     begin
-        Output := Input;
+        Output := HideTypeCodes(Input, RunContext);
         OwnDatesOnly := IsEmail and (Owner <> '');
         WithoutTokens := Input.Replace(TableTok, '');
         Regex.Match(Input, FactTokenPatternTok, TempMatches);
@@ -702,5 +702,42 @@ codeunit 58202 "EXR Engine"
             FeatureTelemetry.LogError(EventId, FeatureNameTok, EventName, TelemetryErrorTok, '', CustomDimensions)
         else
             FeatureTelemetry.LogUsage(EventId, FeatureNameTok, EventName, CustomDimensions);
+    end;
+
+    // The user never sees a type code of the capability: " (FIRST)" or " (BANK, FIRST)" goes, a bare DUPLICATE+BANK reads "duplicate and bank".
+    // Runs on the model's own text, so names that keys and facts put in stay as they are; case-sensitive, so "first" stays.
+    local procedure HideTypeCodes(Input: Text; var RunContext: Codeunit "EXR Run Context") Output: Text
+    var
+        TempMatches: Record Matches temporary;
+        Regex: Codeunit Regex;
+        TypeCode: Text;
+        Codes: Text;
+        Chain: Text;
+        Readable: Text;
+        BracketTok: Label '\(\s*(?:%1)(?:\s*[+,/]\s*(?:%1))*\s*\)', Locked = true;
+        // at the start of the text or a line the space after the bracket goes, elsewhere the space before it
+        ParenthesisedTok: Label '(?<=^|\n)%1 ?| ?%1', Locked = true;
+        // a code followed by -digits is a finding key, such as OVERDUE-1, and stays for the key step
+        ChainTok: Label '(?<![A-Za-z0-9_+])(?:%1)(?:\+(?:%1))*(?![A-Za-z0-9_+]|-\d)', Locked = true;
+        WholeTok: Label '(?<![A-Za-z0-9_+])%1(?![A-Za-z0-9_+]|-\d)', Locked = true;
+        SentenceStartTok: Label '(?<=^\s*|[.!?]\s+|\n\s*)%1(?![A-Za-z0-9_+]|-\d)', Locked = true;
+    begin
+        Output := Input;
+        foreach TypeCode in RunContext.FindingTypeCodes() do begin
+            if Codes <> '' then
+                Codes += '|';
+            Codes += Regex.Escape(TypeCode);
+        end;
+        if Codes = '' then
+            exit;
+        Output := Regex.Replace(Output, StrSubstNo(ParenthesisedTok, StrSubstNo(BracketTok, Codes)), '');
+        Regex.Match(Output, StrSubstNo(ChainTok, Codes), TempMatches);
+        if TempMatches.FindSet() then
+            repeat
+                Chain := TempMatches.ReadValue();
+                Readable := LowerCase(Chain).Replace('_', ' ').Replace('+', ' and ');
+                Output := Regex.Replace(Output, StrSubstNo(SentenceStartTok, Regex.Escape(Chain)), UpperCase(CopyStr(Readable, 1, 1)) + CopyStr(Readable, 2));
+                Output := Regex.Replace(Output, StrSubstNo(WholeTok, Regex.Escape(Chain)), Readable);
+            until TempMatches.Next() = 0;
     end;
 }
